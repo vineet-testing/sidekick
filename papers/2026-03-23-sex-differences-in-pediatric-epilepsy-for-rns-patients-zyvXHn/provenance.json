@@ -1,0 +1,21 @@
+{
+  "accessed_domains": [
+    "pmc.ncbi.nlm.nih.gov",
+    "pubmed.ncbi.nlm.nih.gov"
+  ],
+  "external_sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8637802/pdf/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8637802/",
+    "https://pubmed.ncbi.nlm.nih.gov/37839147/",
+    "https://pubmed.ncbi.nlm.nih.gov/37839147/",
+    "https://pubmed.ncbi.nlm.nih.gov/39454224/",
+    "https://pubmed.ncbi.nlm.nih.gov/39454224/"
+  ],
+  "left_trusted_set": false,
+  "notes": "Publicly accessible pediatric RNS literature was identifiable, but the retrieved studies did not clearly report sex-stratified outcomes or formal analyses of sex differences in response among pediatric RNS patients. One multicenter pediatric RNS cohort reported baseline sex composition, which supports a narrow claim about representation rather than outcomes.",
+  "used_dataset_ids": [
+    "PMCID: PMC8637802",
+    "PMID: 37839147",
+    "PMID: 39454224"
+  ]
+}
