@@ -1,0 +1,59 @@
+{
+  "approved_claim_ids": [
+    "claim_1",
+    "claim_2",
+    "claim_3",
+    "claim_4"
+  ],
+  "approved_claims": [
+    {
+      "artifact_ids": [
+        "artifact_1"
+      ],
+      "claim_id": "claim_1",
+      "notes": "This is a regional estimate and should not be generalized to all of Asia without additional evidence.",
+      "source_ids": [
+        "source_1"
+      ],
+      "text": "Authoritative WHO reporting located here is consistent with the WHO South-East Asia Region having a large share of the world's adolescent tobacco users; the cited figure is about 11 million users aged 13-15 years, or about 30% of the global total, using surveys conducted during 2012-2022 and applied to 2021 populations."
+    },
+    {
+      "artifact_ids": [
+        "artifact_1"
+      ],
+      "claim_id": "claim_2",
+      "notes": "Figure text indicates the estimate is based on surveys from 2012-2022 and population application to 2021.",
+      "source_ids": [
+        "source_1"
+      ],
+      "text": "The same WHO evidence is consistent with an average current tobacco-use prevalence around 11% among adolescents aged 13-15 years in the WHO South-East Asia Region."
+    },
+    {
+      "artifact_ids": [
+        "artifact_1"
+      ],
+      "claim_id": "claim_3",
+      "notes": "These are older regional estimates and may not reflect current prevalence.",
+      "source_ids": [
+        "source_2"
+      ],
+      "text": "Older CDC/WHO GYTS reporting suggests that, in South-East Asia, any tobacco use among students aged 13-15 years was about 12.9% and cigarette smoking was about 4.3% in surveys conducted during 1999-2005."
+    },
+    {
+      "artifact_ids": [
+        "artifact_1"
+      ],
+      "claim_id": "claim_4",
+      "notes": "This supports the presence of public health information infrastructure, but not direct prevalence of teen exposure to information.",
+      "source_ids": [
+        "source_3"
+      ],
+      "text": "Publicly accessible surveillance infrastructure on youth tobacco exists through CDC's GTSSData system, which CDC describes as covering more than 20 tobacco-data topics across four survey families."
+    }
+  ],
+  "dropped_claims": [],
+  "final_format": "Use the CSV artifact as a compact evidence table; treat findings as regional tobacco-use prevalence evidence and survey-coverage metadata rather than a direct measure of 'public health info prevalence.'",
+  "status": "approved",
+  "summary": "Approved 4 claim(s) for writing.",
+  "validation_issues": []
+}
