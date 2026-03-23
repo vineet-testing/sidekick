@@ -1,0 +1,90 @@
+{
+  "candidate_methods": [
+    "Dataset discovery and ingestion via dandi-api; NWB handling with pynwb and Neo",
+    "SpikeInterface for standardized spike-sorting pipelines and quality metrics if raw data require sorting (or use curated unit lists when available)",
+    "Unit classification into putative interneurons vs excitatory neurons using waveform features (peak-to-trough, trough-to-peak, spike width), firing rate, and clustering",
+    "Peri-perturbation PSTHs and baseline-normalized firing-rate analyses",
+    "Pairwise spike-time cross-correlation and shuffled/shift predictors to estimate functional coupling; compute distribution of correlation peak amplitudes and widths",
+    "Population coupling (Okun et al.) to quantify each cell's coupling to network firing",
+    "Joint PSTH (JPSTH) and trial-averaged cross-correlograms aligned to perturbation events",
+    "Generalized linear models (GLMs) with coupling filters to quantify directed spike influence between cells; include covariates for firing rate and behavioral state",
+    "Spectral analyses: spike\u2013LFP coherence, phase-locking value (PLV), and changes in LFP power spectra pre/post perturbation",
+    "Surrogate analyses (spike jitter, trial shuffling) to control for firing-rate-driven correlations",
+    "Mixed-effects models to combine sessions/animals while accounting for nested structure",
+    "Visualization and reproducibility using Jupyter notebooks, containerization (Docker/Singularity), and public code repository"
+  ],
+  "dataset_needs": [
+    {
+      "dataset_id": null,
+      "rationale": "Need NWB-style electrophysiology datasets with explicit interneuron suppression or perturbation epochs (optogenetic silencing of PV/SST interneurons or pharmacological suppression) recorded in awake animals. DANDI hosts many NWB datasets; plan to query DANDI via the dandi-api for recordings containing optogenetic stimulus channels and sorted units. Primary analyses require unit-resolved spike times, LFP, and perturbation timestamps for within-session comparisons.",
+      "role": "primary",
+      "variables": [
+        "spike_times (unit-resolved)",
+        "unit_metadata (putative cell type: interneuron/pyramidal or waveform features)",
+        "continuous LFP (wide-band or filtered bands)",
+        "optogenetic/perturbation timestamps (onset/offset)",
+        "behavioral timestamps (running, epochs)",
+        "recording geometry (channel depths, brain area)",
+        "raw/processed waveform snippets",
+        "session metadata (subject id, date, sampling rates)"
+      ]
+    },
+    {
+      "dataset_id": null,
+      "rationale": "Independent datasets (same brain region) without perturbation are needed to estimate baseline coupling distributions, to build null models, and to validate that observed coupling changes are not pipeline-specific. These can come from other DANDI entries or OpenNeuro NWB conversions; keep dataset_id null to allow selection of best-matching public datasets.",
+      "role": "supporting",
+      "variables": [
+        "spike_times (unit-resolved) from control sessions without perturbation",
+        "unit_metadata",
+        "LFP",
+        "behavioral metadata"
+      ]
+    }
+  ],
+  "execution_notes": "Search DANDI via dandi-api for NWB recordings with 'optogenetic', 'PV', 'SST', 'inhibition', 'laser' and localize sessions with unit-sorted spikes and LFP. Use pynwb/Neo to load data, SpikeInterface to re-run quality metrics or spike sorting if needed, and store all processed outputs as NWB derivatives. Classify units with standardized code (waveform+rate rules) and document thresholds. Compute coupling metrics with Elephant and custom routines: cross-correlograms with shift-predictor, jittered surrogates, population coupling, GLMs (pyglmnet/statsmodels), and spectral analyses with MNE or SciPy. Pre-register analysis decisions (e.g., bin sizes, surrogate methods), include sanity checks (artifact removal around light pulses), and provide a public GitHub repo with notebooks, Dockerfile, and links/IDs of used DANDI/Open datasets to ensure reproducibility. Aim for within-session paired comparisons and mixed-effects models across animals to report effect sizes and confidence intervals rather than only p-values.",
+  "hypotheses": [
+    "Acute reduction of interneuron firing (optogenetic or pharmacological) decreases inhibitory control and increases pairwise spike-time correlations among excitatory neurons.",
+    "Interneuron dampening increases low-frequency spike\u2013LFP coherence and broadens cross-correlation peaks, reflecting more synchronous population events.",
+    "Changes in spike coupling after interneuron dampening are cell-type- and state-dependent (e.g., stronger during quiescence than during movement) and are not explained solely by firing-rate changes."
+  ],
+  "planned_figures": [
+    {
+      "identifier": "figure_1",
+      "purpose": "Show timeline of perturbation (interneuron dampening), example raw traces (LFP), raster of spikes with interneuron labels, and indicate analysis pipeline (NWB -> spike sorting -> coupling metrics) to orient reader and demonstrate data quality.",
+      "title": "Experimental/analysis schematic and example dataset"
+    },
+    {
+      "identifier": "figure_2",
+      "purpose": "Population PSTHs and scatter of firing-rate changes for interneurons vs excitatory neurons to establish immediate effects of the perturbation and verify targeted dampening.",
+      "title": "Effect of interneuron dampening on firing rates"
+    },
+    {
+      "identifier": "figure_3",
+      "purpose": "Distribution plots (violin/histogram) of pairwise cross-correlation peak amplitudes and widths before vs during perturbation, stratified by excitatory\u2013excitatory and excitatory\u2013interneuron pairs, with statistical tests and rate-controlled surrogates.",
+      "title": "Change in pairwise spike correlations"
+    },
+    {
+      "identifier": "figure_4",
+      "purpose": "Population coupling metric per unit pre/post perturbation and change in population event rates (e.g., network bursts), showing how interneuron dampening alters each neuron\u2019s participation in synchronous events.",
+      "title": "Population coupling and network synchrony"
+    },
+    {
+      "identifier": "figure_5",
+      "purpose": "Spectrograms or band-limited power comparisons and spike\u2013LFP coherence changes pre vs during perturbation to link spike coupling changes to LFP oscillatory dynamics.",
+      "title": "Spike\u2013LFP coherence and spectral changes"
+    },
+    {
+      "identifier": "figure_6",
+      "purpose": "Example fitted GLM coupling filters for representative cell pairs and summary statistics across pairs; compare model-predicted coupling changes vs observed cross-correlations and show surrogate controls.",
+      "title": "GLM coupling filters and model controls"
+    }
+  ],
+  "question": "How does acute dampening of interneuron activity alter spike\u2013spike coupling and population synchrony among excitatory neurons in awake behaving animals?",
+  "risks": [
+    "Public datasets with the exact experimental manipulation (acute interneuron suppression with simultaneous well-isolated units and LFP) may be scarce; dataset selection could limit statistical power.",
+    "Unit-type labels may be missing or unreliable; waveform-based classification is imperfect and may confound interneuron identification.",
+    "Optogenetic perturbations can introduce electrical/artifact transients that bias spike detection and LFP measures unless carefully controlled/removed.",
+    "Changes in firing rate can create apparent correlation changes; disentangling rate effects from genuine coupling changes requires conservative surrogates and controls.",
+    "Heterogeneity across labs/protocols (recording rigs, preprocessing, spike-sorting pipelines) may complicate meta-analysis and require harmonization steps."
+  ]
+}
