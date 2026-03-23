@@ -1,0 +1,7 @@
+{
+  "accessed_domains": [],
+  "external_sources": [],
+  "left_trusted_set": false,
+  "notes": "No external datasets were downloaded in this execution environment. analysis.py includes code to query and download from DANDI/OpenNeuro when network access is available. The figure included is generated from an internally simulated dataset to demonstrate the pipeline.",
+  "used_dataset_ids": []
+}
