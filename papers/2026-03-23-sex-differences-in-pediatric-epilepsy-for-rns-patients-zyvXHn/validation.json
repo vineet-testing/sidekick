@@ -1,0 +1,53 @@
+{
+  "approved_claim_ids": [
+    "claim_1",
+    "claim_2",
+    "claim_3"
+  ],
+  "approved_claims": [
+    {
+      "artifact_ids": [
+        "artifact_1"
+      ],
+      "claim_id": "claim_1",
+      "notes": "Supported by accessible PMC full text.",
+      "source_ids": [
+        "source_1"
+      ],
+      "text": "In one retrieved multicenter pediatric RNS cohort, 35 patients were included and 34% were female (12 patients)."
+    },
+    {
+      "artifact_ids": [
+        "artifact_1",
+        "artifact_2"
+      ],
+      "claim_id": "claim_2",
+      "notes": "This is a narrow evidence-gap claim limited to the retrieved sources and extracted text.",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ],
+      "text": "Among the retrieved pediatric RNS studies summarized here, sex-specific seizure outcomes or formal sex-difference analyses were not clearly reported in the accessible extracted text."
+    },
+    {
+      "artifact_ids": [
+        "artifact_1",
+        "artifact_2"
+      ],
+      "claim_id": "claim_3",
+      "notes": "Conservative synthesis reflecting the absence of reproducibly extracted sex-stratified outcome data.",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ],
+      "text": "The currently retrieved public evidence is sufficient to describe pediatric RNS cohort size and overall outcomes more confidently than to support claims about sex differences among pediatric RNS patients."
+    }
+  ],
+  "dropped_claims": [],
+  "final_format": "evidence_gap_memo",
+  "status": "approved",
+  "summary": "Approved 3 claim(s) for writing.",
+  "validation_issues": []
+}
