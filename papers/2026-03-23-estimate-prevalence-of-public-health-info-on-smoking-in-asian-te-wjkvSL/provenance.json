@@ -1,0 +1,21 @@
+{
+  "accessed_domains": [
+    "iris.who.int",
+    "www.cdc.gov",
+    "www.who.int"
+  ],
+  "external_sources": [
+    "https://iris.who.int/bitstream/handle/10665/375711/9789240088283-eng.pdf",
+    "https://www.who.int/southeastasia/news/detail/08-10-2025-tobacco-use-falls-fastest-in-south-east-asia-yet-322-million-people-still-at-risk-who",
+    "https://www.cdc.gov/mmwr/pdf/wk/mm5520.pdf",
+    "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5520a2.htm",
+    "https://www.cdc.gov/tobacco/global/gtss/gtssdata/index.html"
+  ],
+  "left_trusted_set": false,
+  "notes": "Available public evidence located through WHO and CDC supports a narrow estimate about adolescent tobacco-use prevalence and the existence of public surveillance infrastructure in Asia, especially the WHO South-East Asia Region. The strongest directly reproducible figures found here indicate that WHO reported about 11 million adolescent tobacco users aged 13-15 years in the South-East Asia Region, representing about 30% of the global total, with an average current tobacco-use prevalence of about 11% based on surveys conducted during 2012-2022 and applied to 2021 populations. Older CDC/WHO GYTS reporting for 1999-2005 reported South-East Asian regional prevalence around 12.9% for any tobacco use and 4.3% for cigarette smoking among students aged 13-15 years. CDC also documents a standing public data system covering more than 20 tobacco-data topics via GTSSData.",
+  "used_dataset_ids": [
+    "CDC page last reviewed March 13, 2025",
+    "ISBN 9789240088283",
+    "MMWR May 26, 2006 / 55(20)"
+  ]
+}
