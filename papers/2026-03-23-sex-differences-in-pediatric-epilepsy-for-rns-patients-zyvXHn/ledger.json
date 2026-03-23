@@ -1,0 +1,127 @@
+{
+  "artifact_files": [
+    {
+      "artifact_id": "artifact_1",
+      "mime_type": "text/csv",
+      "path": "mnt/data/artifacts/pediatric_rns_sex_evidence_table.csv",
+      "sha256": "31fd823b1903db6d36ce8f2b4adfd90bed8783b6d089dcf30927c4f5de8b062a"
+    },
+    {
+      "artifact_id": "artifact_2",
+      "mime_type": "text/plain",
+      "path": "mnt/data/artifacts/research_log.txt",
+      "sha256": "4df5d6e7f906c7b83d44a284ab8d12c1504951c79eb118c4732e481314e6552d"
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "artifact_1",
+      "description": "Structured evidence table summarizing retrieved pediatric RNS studies, available sex representation fields, and whether sex-specific outcomes were reported.",
+      "kind": "table",
+      "mime_type": "text/csv",
+      "path": "mnt/data/artifacts/pediatric_rns_sex_evidence_table.csv",
+      "sha256": "31fd823b1903db6d36ce8f2b4adfd90bed8783b6d089dcf30927c4f5de8b062a",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ]
+    },
+    {
+      "artifact_id": "artifact_2",
+      "description": "Brief research log documenting search scope, retrieval outcome, and conservative interpretation of the evidence gap.",
+      "kind": "log",
+      "mime_type": "text/plain",
+      "path": "mnt/data/artifacts/research_log.txt",
+      "sha256": "4df5d6e7f906c7b83d44a284ab8d12c1504951c79eb118c4732e481314e6552d",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "artifact_ids": [
+        "artifact_1"
+      ],
+      "claim_id": "claim_1",
+      "notes": "Supported by accessible PMC full text.",
+      "source_ids": [
+        "source_1"
+      ],
+      "text": "In one retrieved multicenter pediatric RNS cohort, 35 patients were included and 34% were female (12 patients)."
+    },
+    {
+      "artifact_ids": [
+        "artifact_1",
+        "artifact_2"
+      ],
+      "claim_id": "claim_2",
+      "notes": "This is a narrow evidence-gap claim limited to the retrieved sources and extracted text.",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ],
+      "text": "Among the retrieved pediatric RNS studies summarized here, sex-specific seizure outcomes or formal sex-difference analyses were not clearly reported in the accessible extracted text."
+    },
+    {
+      "artifact_ids": [
+        "artifact_1",
+        "artifact_2"
+      ],
+      "claim_id": "claim_3",
+      "notes": "Conservative synthesis reflecting the absence of reproducibly extracted sex-stratified outcome data.",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ],
+      "text": "The currently retrieved public evidence is sufficient to describe pediatric RNS cohort size and overall outcomes more confidently than to support claims about sex differences among pediatric RNS patients."
+    }
+  ],
+  "limitations": [
+    "The retrieved pediatric RNS studies were small retrospective series or pooled literature analyses.",
+    "Most retrieved abstracts did not provide sex-stratified outcomes.",
+    "Only one retrieved full-text pediatric multicenter study clearly exposed baseline female representation in the accessible text.",
+    "No strong claim about sex differences in seizure outcomes, complications, or quality of life among pediatric RNS patients was supportable from the saved evidence artifacts alone.",
+    "Some relevant full texts may exist behind publisher access barriers and were not reproducibly extracted here."
+  ],
+  "recommended_format": "evidence_gap_memo",
+  "sources": [
+    {
+      "accession_id": "PMCID: PMC8637802",
+      "api_endpoint": "PMC article page",
+      "api_query": "PMCID PMC8637802",
+      "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8637802/pdf/",
+      "label": "PMC full text: Real-World Preliminary Experience With Responsive Neurostimulation in Pediatric Epilepsy",
+      "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8637802/",
+      "notes": "Accessible full text. Reports cohort size, baseline female proportion, and overall seizure outcomes, but no clear sex-stratified outcome analysis was extracted.",
+      "source_id": "source_1"
+    },
+    {
+      "accession_id": "PMID: 37839147",
+      "api_endpoint": "PubMed article page",
+      "api_query": "PMID 37839147",
+      "download_url": "https://pubmed.ncbi.nlm.nih.gov/37839147/",
+      "label": "PubMed abstract: Responsive neurostimulation for treatment of pediatric refractory epilepsy: A pooled analysis of the literature",
+      "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/37839147/",
+      "notes": "Abstract-level access showed pooled pediatric RNS sample size and overall outcomes, but no sex-specific analysis in the retrieved text.",
+      "source_id": "source_2"
+    },
+    {
+      "accession_id": "PMID: 39454224",
+      "api_endpoint": "PubMed article page",
+      "api_query": "PMID 39454224",
+      "download_url": "https://pubmed.ncbi.nlm.nih.gov/39454224/",
+      "label": "PubMed abstract: Responsive Neurostimulation in Pediatric and Young Adult Patients With Drug-Resistant Focal, Multifocal, and Generalized Epilepsy: A Single-Center Experience",
+      "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39454224/",
+      "notes": "Abstract-level access showed overall responder rate and age range, but no sex-stratified outcomes in the retrieved text.",
+      "source_id": "source_3"
+    }
+  ],
+  "summary": "Publicly accessible pediatric RNS literature was identifiable, but the retrieved studies did not clearly report sex-stratified outcomes or formal analyses of sex differences in response among pediatric RNS patients. One multicenter pediatric RNS cohort reported baseline sex composition, which supports a narrow claim about representation rather than outcomes.",
+  "title": "Sex differences in pediatric epilepsy for RNS patients"
+}
