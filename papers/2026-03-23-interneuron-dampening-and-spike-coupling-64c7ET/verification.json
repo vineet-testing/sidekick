@@ -1,0 +1,30 @@
+{
+  "decision": "revise_analysis",
+  "figure_sanity_checks": [
+    {
+      "filename": "figure_1.png",
+      "issue": "Figure produced from synthetic data. Layout and scales are reasonable; ensure axis labels and legends are adapted if applied to real data.",
+      "status": "ok"
+    }
+  ],
+  "model_warnings": [
+    "No statistical modeling was fit to real datasets. analysis.py contains scaffolding for GLMs, but fitting on real datasets requires data-specific preprocessing and regularization choices."
+  ],
+  "required_revisions": [
+    "Run analysis.py with real NWB/DANDI datasets and include dataset IDs in the manifest once executed.",
+    "Perform comprehensive QC on unit isolation and artifact removal around optogenetic stimuli.",
+    "Report mixed-effects model results and bootstrapped confidence intervals across sessions/animals for empirical claims."
+  ],
+  "sample_warnings": [
+    "Synthetic sample sizes and parameter choices are illustrative only. Real datasets may have different unit counts, firing rates, and artifact characteristics."
+  ],
+  "summary": "The provided bundle contains a fully reproducible pipeline and an illustrative synthetic example. However, no real public NWB/DANDI datasets were downloaded or analyzed in this execution environment, so empirical claims about neural data cannot be supported. To proceed to an empirical paper, the user must run the pipeline with real NWB datasets (e.g., DANDI entries containing interneuron suppression experiments).",
+  "supported_claims": [
+    "The analysis pipeline can generate population-rate plots, rasters, and pairwise correlation histograms from unit-resolved spike trains and LFP.",
+    "In the synthetic example, interneuron dampening is associated with a slight increase in measured pairwise correlations among excitatory cells."
+  ],
+  "weak_or_unsupported_claims": [
+    "Any claim that acute interneuron suppression increases coupling in real data is unsupported until real NWB datasets are analyzed with the provided pipeline.",
+    "Cell-type-specific and state-dependent generalizations require multi-session, multi-animal empirical data, not synthetic demonstration."
+  ]
+}
