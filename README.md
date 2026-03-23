@@ -1,2 +1,3 @@
-# sidekick
-Reproducible research artifacts published by Sidekick.
+# Sidekick Research
+
+This repository stores reproducible paper bundles published by Sidekick.
