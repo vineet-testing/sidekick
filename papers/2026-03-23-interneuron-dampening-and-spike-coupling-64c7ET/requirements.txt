@@ -1,0 +1,10 @@
+numpy
+scipy
+matplotlib
+pynwb
+neo
+spikeinterface
+mne
+statsmodels
+pyglmnet
+python-dateutil
