@@ -1,0 +1,1 @@
+Public evidence collected from WHO and CDC web snippets via web tool. No direct bulk dataset download was available inside the container; ledger is limited to reported regional estimates and survey-system metadata.
