@@ -1,0 +1,12 @@
+{
+  "dataset_sources": [
+    "DANDI (https://dandiarchive.org) - recommended primary search",
+    "OpenNeuro (https://openneuro.org) - alternative NWB sources",
+    "Local NWB files provided by user"
+  ],
+  "entrypoint": "analysis.py",
+  "model": "gpt-4o-code-interpreter",
+  "notes_hash": "94591fa53f49d87ea6c8e48c3b88a14efab79de8b5cb0cec0c24f84f7205703a",
+  "python_version": "3.11",
+  "run_command": "python analysis.py"
+}
