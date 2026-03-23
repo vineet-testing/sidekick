@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{graphicx}
+\title{Interneuron dampening and spike coupling}
+\author{Reproducible Analysis Bundle}
+\begin{document}
+\maketitle
+\begin{abstract}
+This bundle presents a reproducible pipeline to quantify how acute reduction of interneuron activity affects spike--spike coupling and population synchrony. The package attempts to find public NWB datasets via DANDI and otherwise runs a synthetic example demonstrating expected outputs. The methods include unit classification, pairwise correlations, population coupling, GLM coupling filters, and spike--LFP spectral analyses.\end{abstract}
+
+\section{Introduction}
+Interneurons shape cortical dynamics ... [See markdown for full text with references].
+
+\section{Methods}
+Detailed code is provided in analysis.py. The pipeline supports NWB inputs via pynwb, spike sorting/QA via SpikeInterface, and spectral analyses via SciPy/MNE.
+
+\section{Illustrative results}
+Figure~\ref{fig:example} shows an example run on synthetic data (script saves figure_1.png).
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.9\textwidth]{figure_1.png}
+\caption{Illustrative synthetic example saved by analysis.py.}
+\label{fig:example}
+\end{figure}
+
+\section{Limitations}
+The provided demonstration uses simulated data; users must run the script with real NWB datasets to produce empirical results.
+
+\end{document}
