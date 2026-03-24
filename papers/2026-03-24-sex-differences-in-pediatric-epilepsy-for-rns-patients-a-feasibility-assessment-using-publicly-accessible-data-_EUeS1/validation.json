@@ -1,0 +1,38 @@
+{
+  "approved_result_ids": [
+    "result_1"
+  ],
+  "approved_results": [
+    {
+      "artifact_ids": [
+        "artifact_1",
+        "artifact_2",
+        "artifact_3"
+      ],
+      "result_id": "result_1",
+      "source_ids": [
+        "source_1"
+      ],
+      "text": "The run did not identify a public patient-level dataset that would allow an original sex-stratified analysis of pediatric RNS outcomes. The most directly relevant accessible source was a 2024 pediatric RNS systematic review abstract reporting 105 aggregated pediatric patients from 17 retrospective studies and stating that RNS effectiveness was not influenced by patient sex, but the underlying analyzable individual-level data were not publicly available from the accessed material. Therefore, no original inferential test of sex differences could be carried out in this run."
+    }
+  ],
+  "dropped_results": [],
+  "final_format": "paper",
+  "manuscript_kind": "paper",
+  "memo_reasons": [],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": true,
+    "has_original_result": true
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "PubMed record for pediatric RNS systematic review and individual patient meta-analysis. Accession: PMID:39060746. https://pubmed.ncbi.nlm.nih.gov/39060746/. Accessible abstract reported 17 retrospective studies and 105 aggregated pediatric patients; it stated that effectiveness was not influenced by patient sex, but no downloadable patient-level data were exposed in the accessed material."
+    }
+  ],
+  "status": "paper",
+  "summary": "Paper checks passed with 1 artifact-backed result(s).",
+  "validation_issues": []
+}
