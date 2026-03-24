@@ -1,0 +1,4 @@
+indicator,n_observations,mean_prevalence_pct,median_prevalence_pct,min_prevalence_pct,max_prevalence_pct
+current cigarette smoking,3,14.433333333333335,14.8,2.4,26.1
+current smokeless tobacco use,6,3.9166666666666665,2.1,1.7,12.7
+current tobacco use,3,16.933333333333334,17.4,3.9,29.5
