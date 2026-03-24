@@ -1,0 +1,14 @@
+{
+  "accessed_domains": [
+    "pubmed.ncbi.nlm.nih.gov"
+  ],
+  "external_sources": [
+    "https://pubmed.ncbi.nlm.nih.gov/39060746/",
+    "https://pubmed.ncbi.nlm.nih.gov/39060746/"
+  ],
+  "left_trusted_set": false,
+  "notes": "Can sex differences in treatment response among pediatric patients receiving responsive neurostimulation (RNS) for drug-resistant epilepsy be evaluated with publicly accessible patient-level data discovered in this run?",
+  "used_dataset_ids": [
+    "PMID:39060746"
+  ]
+}
