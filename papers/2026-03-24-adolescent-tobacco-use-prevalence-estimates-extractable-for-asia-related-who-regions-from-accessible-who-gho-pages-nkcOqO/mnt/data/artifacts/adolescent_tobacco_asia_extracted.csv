@@ -1,0 +1,20 @@
+source_ref,who_region,country,year,sex,indicator,prevalence_pct,asia_region
+turn0search10,Eastern Mediterranean,Pakistan,2013,Male,current tobacco use,13.3,Non-Asia comparator
+turn0search1,Eastern Mediterranean,Iran (Islamic Republic of),2016,Male,current tobacco smoking,11.6,Non-Asia comparator
+turn0search1,Eastern Mediterranean,Saudi Arabia,2022,Female,current cigarette smoking,2.2,Non-Asia comparator
+turn0search1,Eastern Mediterranean,Saudi Arabia,2022,Both sexes,current cigarette smoking,2.9,Non-Asia comparator
+turn0search1,Eastern Mediterranean,Saudi Arabia,2022,Male,current cigarette smoking,3.5,Non-Asia comparator
+turn0search1,Eastern Mediterranean,Bahrain,2016,Both sexes,current cigarette smoking,13.4,Non-Asia comparator
+turn0search1,Eastern Mediterranean,Sudan,2014,Male,current cigarette smoking,6.2,Non-Asia comparator
+turn0search2,Western Pacific,Cambodia,2022,Male,current smokeless tobacco use,2.1,Asia-related WHO regions
+turn0search2,Western Pacific,Cambodia,2022,Female,current smokeless tobacco use,1.7,Asia-related WHO regions
+turn0search2,Western Pacific,Cambodia,2022,Both sexes,current smokeless tobacco use,1.9,Asia-related WHO regions
+turn0search2,Western Pacific,Cook Islands,2016,Both sexes,current smokeless tobacco use,3.0,Asia-related WHO regions
+turn0search2,Western Pacific,Fiji,2016,Both sexes,current smokeless tobacco use,2.1,Asia-related WHO regions
+turn0search2,Western Pacific,Micronesia (Federated States of),2019,Female,current smokeless tobacco use,12.7,Asia-related WHO regions
+turn0search15,Western Pacific,Malaysia,2016,Both sexes,current tobacco use,29.5,Asia-related WHO regions
+turn0search15,Western Pacific,Malaysia,2016,Female,current tobacco use,3.9,Asia-related WHO regions
+turn0search15,Western Pacific,Malaysia,2016,Male,current tobacco use,17.4,Asia-related WHO regions
+turn0search15,Western Pacific,Malaysia,2016,Both sexes,current cigarette smoking,26.1,Asia-related WHO regions
+turn0search15,Western Pacific,Malaysia,2016,Female,current cigarette smoking,2.4,Asia-related WHO regions
+turn0search15,Western Pacific,Malaysia,2016,Male,current cigarette smoking,14.8,Asia-related WHO regions
