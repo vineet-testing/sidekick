@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{tabularx}
+
+\usepackage{caption}
+
+\usepackage{float}
+
+\usepackage{microtype}
+
+\usepackage{mathptmx}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+
+\setlength{\parindent}{1.25em}
+
+\setlength{\parskip}{0pt}
+
+\title{Sex differences in pediatric epilepsy for RNS patients: a feasibility assessment using publicly accessible data}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\small\textit{Research Paper}\end{center}
+
+\begin{abstract}
+
+Background: We asked whether sex differences in treatment response among pediatric patients receiving responsive neurostimulation (RNS) for drug-resistant epilepsy could be evaluated using publicly accessible data identified in this run. Methods: We searched for public sources related to pediatric epilepsy, RNS, and sex differences, and reviewed the most relevant accessible PubMed record for a 2024 pediatric RNS systematic review and individual patient meta-analysis \cite{ref1}. From the abstract, we extracted only directly visible quantitative cohort-level counts and summarized them in a table and figure \ref{tab:artifact-1}\ref{fig:artifact-2}. Results: The run did not identify a public patient-level dataset suitable for an original sex-stratified analysis. The accessible source reported 105 aggregated pediatric patients from 17 retrospective studies and stated that RNS effectiveness was not influenced by patient sex, but the underlying individual-level data were not publicly available in the accessed material \cite{ref1}. Conclusions: In this run, a sex-difference efficacy analysis could not be completed because only abstract-level summary information was available. The output is therefore a feasibility and provenance assessment rather than an inferential study.
+
+\end{abstract}
+
+\section{Introduction}
+Sex differences are an important consideration in pediatric epilepsy research, including studies of responsive neurostimulation (RNS) for drug-resistant epilepsy. The research question for this run was whether publicly accessible data could support an original evaluation of sex differences in treatment response among pediatric RNS-treated patients. To address this question, we searched for public sources specifically related to pediatric epilepsy, RNS, and sex differences, then examined the most relevant accessible publication identified in the search, a 2024 PubMed record for a pediatric RNS systematic review and individual patient meta-analysis \cite{ref1}. The aim was not to reanalyze a completed dataset, but to assess whether the available public material contained sufficient patient-level or sex-stratified information to support such an analysis.
+
+\section{Methods}
+We searched the web for public data sources related to pediatric epilepsy, responsive neurostimulation, and sex differences. We then reviewed the most relevant accessible result, a PubMed record for a 2024 pediatric RNS systematic review and individual patient meta-analysis (PMID 39060746) because it directly addressed pediatric RNS and mentioned sex as a variable \cite{ref1}. From the accessible abstract text, we extracted only quantitative cohort-level counts that were explicitly visible: 105 aggregated pediatric patients and 17 retrospective studies. These counts were recorded in a CSV table and visualized in a simple bar chart \ref{tab:artifact-1}\ref{fig:artifact-2}. We also documented the search and extraction workflow in a run log \ref{tab:artifact-3}. No sex-stratified statistical analysis was performed because no downloadable public patient-level dataset for pediatric RNS outcomes by sex was identified, and the accessible source did not expose individual-level data needed for original computation.
+
+\section{Results}
+The run did not identify a public patient-level dataset that would allow an original sex-stratified analysis of pediatric RNS outcomes. The most directly relevant accessible source was a 2024 pediatric RNS systematic review abstract reporting 105 aggregated pediatric patients from 17 retrospective studies and stating that RNS effectiveness was not influenced by patient sex \cite{ref1}. These extracted counts are summarized in \ref{tab:artifact-1} and visualized in \ref{fig:artifact-2}, which together show that the available evidence located in this run was limited to cohort-level summary information rather than analyzable individual-level data. The run log in \ref{tab:artifact-3} documents that no public downloadable dataset suitable for sex-stratified analysis was identified. Therefore, no original inferential test of sex differences could be carried out in this run.
+
+\begin{table}[tbp]
+\centering
+\caption{CSV containing quantitative counts extracted from the accessible pediatric RNS PubMed abstract.}
+\label{tab:artifact-1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}}
+\toprule
+metric & value & group \\
+\midrule
+Total aggregated pediatric patients & 105 & overall \\
+Included retrospective studies & 17 & overall \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\caption{Run log documenting the search process, extraction steps, and why original sex-stratified analysis was not possible.}
+\label{tab:artifact-3}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.15\linewidth}}
+\toprule
+Searched for public datasets on sex differences in pediatric epilepsy for RNS pa \\
+\midrule
+Did not identify a downloadable patient-level public dataset for pediatric RNS o \\
+Opened PubMed abstract PMID 39060746 and extracted only directly visible quantit \\
+No original sex-stratified statistical analysis was possible from available mate \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.94\linewidth]{figures/figure\_1.png}
+\caption{Bar chart summarizing extracted cohort-level counts from the accessible pediatric RNS abstract.}
+\label{fig:artifact-2}
+\end{figure}
+
+\section{Discussion}
+This run shows that the publicly accessible evidence located for pediatric RNS and sex differences was insufficient for an original sex-stratified outcome analysis. The accessible PubMed abstract indicates that prior work synthesized 17 retrospective studies comprising 105 aggregated pediatric patients and reported that effectiveness was not influenced by patient sex \cite{ref1}. However, because the accessed material did not expose the underlying patient-level data, the present work could only evaluate feasibility and provenance. In practical terms, the main contribution of this run is to document that the relevant evidence was identifiable at the abstract level but not available in a form that supported independent statistical analysis. This distinction matters for researchers who may wish to build on the literature: a published summary statement about sex does not substitute for accessible individual-level or sex-stratified aggregate data when the goal is to reproduce or extend the analysis.
+
+\section{Limitations}
+No public downloadable patient-level dataset for pediatric RNS outcomes by sex was identified in this run. The accessible PubMed source provided only abstract-level summary information, not raw or tabulated sex-stratified outcomes. Without individual-level or at least sex-stratified aggregate data, original statistical estimation of sex differences was not possible. The result is a feasibility and provenance assessment rather than a completed sex-difference efficacy study. In addition, the work was limited to the accessible material discovered during this run and did not include unpublished data requests or analysis of restricted-access repositories.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
