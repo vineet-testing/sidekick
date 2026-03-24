@@ -1,0 +1,63 @@
+{
+  "approved_result_ids": [
+    "result_1",
+    "result_2"
+  ],
+  "approved_results": [
+    {
+      "artifact_ids": [
+        "artifact_1",
+        "artifact_2",
+        "artifact_3"
+      ],
+      "result_id": "result_1",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ],
+      "text": "From the accessible WHO snippets in this run, I extracted 12 adolescent tobacco-related prevalence observations for Asia-related WHO regions (all from the Western Pacific region in the visible snippets). Across these extracted observations, current tobacco use in Malaysia reached 29.5% (both sexes, 2016), while the lowest extracted Asia-related value was 1.7% for current smokeless tobacco use among female adolescents in Cambodia (2022)."
+    },
+    {
+      "artifact_ids": [
+        "artifact_2",
+        "artifact_4"
+      ],
+      "result_id": "result_2",
+      "source_ids": [
+        "source_2",
+        "source_3"
+      ],
+      "text": "Within the extracted Asia-related observations, mean prevalence was 16.93% for current cigarette smoking (based on the visible Malaysia values only), 13.60% for current tobacco use (based on the visible Malaysia values only), and 3.92% for current smokeless tobacco use (Cambodia, Cook Islands, Fiji, and Micronesia values visible in the accessible WHO snippet). These are descriptive summaries of the extracted visible records only, not regional population-weighted estimates."
+    }
+  ],
+  "dropped_results": [],
+  "final_format": "paper",
+  "manuscript_kind": "paper",
+  "memo_reasons": [],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": true,
+    "has_original_result": true
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "WHO GHO Athena snippet: adolescent tobacco smoking/survey table for Eastern Mediterranean region. Accession: turn0search1. https://apps.who.int/gho/athena/data/GHO/Youth_svy_yr%2CYouth_svy_national%2CYouth_svy_age_range%2CYouth_survey_title%2CYth_curr_tob_use%2CYth_daily_tob_use%2CYth_curr_tob_smoking%2CYth_daily_tob_smoking%2CYth_curr_cig_smoking%2CYth_daily_cig_smoking.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AEMR%3B&profile=ztable. Used only for directly visible numeric snippet values shown by the web tool."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "WHO GHO Athena snippet: adolescent smokeless tobacco/e-cigarette table for Western Pacific region. Accession: turn0search2. https://apps.who.int/gho/athena/data/GHO/Yth_nonsmoked_svy_title%2CYth_nonsmoked_svy_yr%2CYth_nonsmoked_national%2CYth_nonsmoked_age_grp%2CYth_curr_smokeless%2CYth_daily_smokeless%2CYth_curr_e-cig%2CYth_daily_e-cig.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AWPR%3B&profile=ztable. Primary source for Asia-related visible numeric values in this run."
+    },
+    {
+      "key": "ref3",
+      "source_id": "source_3",
+      "text": "WHO report on the global tobacco epidemic 2017 snippet containing Malaysian adolescent survey values. Accession: turn0search15. https://extranet.who.int/fctcapps/sites/default/files/2023-11/WHO%20Report%20on%20the%20Global%20Tobacco%20Epidemic%202017.pdf. Used because the snippet exposed concrete Malaysia prevalence values."
+    }
+  ],
+  "status": "paper",
+  "summary": "Paper checks passed with 2 artifact-backed result(s).",
+  "validation_issues": []
+}
