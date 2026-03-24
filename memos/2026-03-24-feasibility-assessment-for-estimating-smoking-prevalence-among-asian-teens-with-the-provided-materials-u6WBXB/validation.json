@@ -1,0 +1,36 @@
+{
+  "approved_result_ids": [],
+  "approved_results": [],
+  "dropped_results": [],
+  "final_format": "memo",
+  "manuscript_kind": "memo",
+  "memo_reasons": [
+    "no artifact-backed original results survived validation",
+    "no original result resolved to a real saved artifact"
+  ],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": false,
+    "has_original_result": false
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "CDC Data search result: Youth And Tobacco Use Infographic. Accession: g9dy-mhts. https://data.cdc.gov/Survey-Data/Youth-And-Tobacco-Use-Infographic/g9dy-mhts. Topic-relevant CDC page was found, but in this run it did not yield a machine-readable teen-by-Asian subgroup dataset suitable for direct prevalence estimation."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "CDC Data search result: Race and Ethnic Disparities in Cigarette Smoking Among Adults. Accession: 4ntf-u76j. https://data.cdc.gov/Survey-Data/Race-and-Ethnic-Disparities-in-Cigarette-Smoking-A/4ntf-u76j. Accessible CDC result concerned adults rather than teenagers, so it was not suitable for the study question."
+    },
+    {
+      "key": "ref3",
+      "source_id": "source_3",
+      "text": "GitHub repository hint: BRFSS 2015 diabetes dataset mirror. Accession: anandprakash0/Diabetes-prediction. https://github.com/anandprakash0/Diabetes-prediction. Repository description indicates BRFSS 2015 diabetes health indicators files, which are unrelated to smoking prevalence among Asian teens."
+    }
+  ],
+  "status": "memo",
+  "summary": "Routing to a research memo because the run did not clear the paper gate.",
+  "validation_issues": []
+}
