@@ -1,0 +1,18 @@
+{
+  "accessed_domains": [
+    "data.cdc.gov",
+    "github.com"
+  ],
+  "external_sources": [
+    "https://data.cdc.gov/Survey-Data/Youth-And-Tobacco-Use-Infographic/g9dy-mhts",
+    "https://data.cdc.gov/Survey-Data/Race-and-Ethnic-Disparities-in-Cigarette-Smoking-A/4ntf-u76j",
+    "https://github.com/anandprakash0/Diabetes-prediction"
+  ],
+  "left_trusted_set": false,
+  "notes": "Can the prevalence of cigarette smoking among Asian teenagers be estimated from the user-provided dataset hints and directly retrievable public data sources available in this run?",
+  "used_dataset_ids": [
+    "4ntf-u76j",
+    "anandprakash0/Diabetes-prediction",
+    "g9dy-mhts"
+  ]
+}
