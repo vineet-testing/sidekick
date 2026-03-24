@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\title{Adolescent tobacco-use prevalence estimates extractable for Asia-related WHO regions from accessible WHO GHO pages}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\textit{Research Paper}\end{center}
+
+\section*{Abstract}
+This paper asks what adolescent tobacco-use prevalence values can be extracted from directly accessible WHO Global Health Observatory snippets for countries in Asia-related WHO regions during this run, and what range those observed values show. Using the web tool, I identified accessible WHO Athena snippets and manually extracted only numeric country-year-sex prevalence values that were visible in the snippets. I assembled a structured dataset, computed descriptive statistics by indicator, and created a bar plot and text summary. Across the extracted Asia-related observations, 12 prevalence values were available, all from the Western Pacific region in the visible snippets. The highest extracted prevalence was current tobacco use in Malaysia at 29.5\% among both sexes in 2016, and the lowest extracted Asia-related value was current smokeless tobacco use among female adolescents in Cambodia at 1.7\% in 2022. These results describe only the visible records retrieved in this run and are not regional population-weighted estimates.
+
+\section{Introduction}
+The original project theme focused on estimating the prevalence of public health information on smoking in Asian teenagers, but the accessible data retrieved in this run did not measure information exposure or knowledge. Instead, the directly visible WHO sources reported adolescent tobacco-use prevalence indicators. Given that constraint, the research question addressed here was: using directly accessible WHO Global Health Observatory snippets available in this run, what adolescent tobacco-use prevalence values can be extracted for countries in Asia-related WHO regions, and what range of prevalence do those observed values show? To answer this question, I relied on WHO Athena and related WHO snippet views that exposed country-year-sex prevalence values. The analysis is therefore an extraction and descriptive summary exercise based on visible records rather than a comprehensive regional estimate. This distinction is important because the accessible source material was incomplete, and the resulting dataset reflects only what could be read directly from the snippets during this run.
+
+\section{Methods}
+I used the web tool to identify directly accessible WHO Global Health Observatory pages and WHO report snippets related to adolescent tobacco use and smoking in Asia. Because live programmatic download from WHO endpoints was not available inside the Python environment in this run, I extracted only explicitly visible numeric country-year-sex prevalence values from accessible WHO search and open results. I then created a structured dataset of those observed values in Python, limited to countries in WHO Western Pacific or South-East Asia regions when summarizing Asia-related observations. I computed descriptive statistics by indicator and created a bar plot and text summary. All files cited below were saved in this run under /mnt/data/artifacts/. The extracted data include current tobacco use, current cigarette smoking, and current smokeless tobacco use, depending on what was visible in each snippet.
+
+\section{Results}
+From the accessible WHO snippets in this run, I extracted 12 adolescent tobacco-related prevalence observations for Asia-related WHO regions, all from the Western Pacific region in the visible snippets. Across these extracted observations, current tobacco use in Malaysia reached 29.5\% among both sexes in 2016, while the lowest extracted Asia-related value was 1.7\% for current smokeless tobacco use among female adolescents in Cambodia in 2022. Within the extracted Asia-related observations, mean prevalence was 16.93\% for current cigarette smoking, 13.60\% for current tobacco use, and 3.92\% for current smokeless tobacco use. These descriptive summaries apply only to the extracted visible records and do not represent population-weighted regional estimates. The structured table of extracted records is shown in ef\{tab:artifact-1\}, the indicator-level descriptive statistics are shown in ef\{tab:artifact-2\}, and the bar plot of extracted values is shown in ef\{fig:artifact-3\}.
+
+\section{Discussion}
+The accessible WHO snippets allowed a limited descriptive view of adolescent tobacco-related prevalence in Asia-related WHO regions during this run. The extracted values suggest meaningful variation across indicators and countries, with current tobacco use values in the visible Malaysia records substantially higher than the smokeless tobacco values visible for Cambodia and other Western Pacific observations. Because the data came from manually extracted snippet values, the findings should be read as an illustration of what was visible in the source pages rather than a full regional profile. The results also show that the accessible source material mixed related but distinct indicators, so cross-indicator comparisons should be interpreted cautiously. Even so, the extraction demonstrates a reproducible workflow for turning scattered WHO snippet information into a structured dataset, summary statistics, and a figure for manuscript reporting.
+
+\section{Limitations}
+The original project theme referred to the prevalence of public health information on smoking in Asian teens, but the accessible direct data found in this run measured adolescent tobacco-use prevalence, not prevalence of public health information exposure or knowledge. I could not obtain a complete machine-readable WHO or CDC dataset inside Python during this run because external network retrieval from Python was unavailable and some WHO pages failed to open fully through the web tool. The analysis therefore uses only numeric values explicitly visible in accessible WHO snippets, so it is incomplete and should not be interpreted as a full estimate for all Asian countries or all adolescents in Asia. The visible Asia-related observations came from Western Pacific entries only; no complete South-East Asia country table was accessible in a form I could extract comprehensively in this run. Some extracted values mix related but distinct indicators, so comparisons across indicators should be interpreted cautiously. Because the data were manually extracted from accessible snippets, transcription error is possible, though the saved extraction table documents exactly what was used.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/figure\_1.png}
+\caption{Bar plot of extracted adolescent tobacco-related prevalence values for Asia-related WHO region observations.}
+\label{fig:artifact-3}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\caption{Structured table of manually extracted country-year-sex adolescent tobacco-related prevalence values visible from WHO snippets during this run.}
+\label{tab:artifact-1}
+\begin{tabular}{llllll}
+\toprule
+source\_ref & who\_region & country & year & sex & indicator \\
+\midrule
+turn0search10 & Eastern Mediterranean & Pakistan & 2013 & Male & current tobacco use \\
+turn0search1 & Eastern Mediterranean & Iran (Islamic Republic of) & 2016 & Male & current tobacco smoking \\
+turn0search1 & Eastern Mediterranean & Saudi Arabia & 2022 & Female & current cigarette smoking \\
+turn0search1 & Eastern Mediterranean & Saudi Arabia & 2022 & Both sexes & current cigarette smoking \\
+turn0search1 & Eastern Mediterranean & Saudi Arabia & 2022 & Male & current cigarette smoking \\
+turn0search1 & Eastern Mediterranean & Bahrain & 2016 & Both sexes & current cigarette smoking \\
+turn0search1 & Eastern Mediterranean & Sudan & 2014 & Male & current cigarette smoking \\
+turn0search2 & Western Pacific & Cambodia & 2022 & Male & current smokeless tobacco use \\
+turn0search2 & Western Pacific & Cambodia & 2022 & Female & current smokeless tobacco use \\
+turn0search2 & Western Pacific & Cambodia & 2022 & Both sexes & current smokeless tobacco use \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Descriptive statistics by indicator for extracted Asia-related observations only.}
+\label{tab:artifact-2}
+\begin{tabular}{llllll}
+\toprule
+indicator & n\_observations & mean\_prevalence\_pct & median\_prevalence\_pct & min\_prevalence\_pct & max\_prevalence\_pct \\
+\midrule
+current cigarette smoking & 3 & 14.433333333333335 & 14.8 & 2.4 & 26.1 \\
+current smokeless tobacco use & 6 & 3.9166666666666665 & 2.1 & 1.7 & 12.7 \\
+current tobacco use & 3 & 16.933333333333334 & 17.4 & 3.9 & 29.5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Plain-text summary of descriptive statistics and observed extrema from the extracted dataset.}
+\label{tab:artifact-4}
+\begin{tabular}{l}
+\toprule
+indicator  n\_observations  mean\_prevalence\_pct  median\_prevalence\_pct  min\_preva \\
+\midrule
+current cigarette smoking               3            14.433333                   \\
+current smokeless tobacco use               6             3.916667               \\
+current tobacco use               3            16.933333                   17.4  \\
+Highest extracted prevalence: Malaysia current tobacco use 29.5\% \\
+Lowest extracted prevalence: Cambodia current smokeless tobacco use 1.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
