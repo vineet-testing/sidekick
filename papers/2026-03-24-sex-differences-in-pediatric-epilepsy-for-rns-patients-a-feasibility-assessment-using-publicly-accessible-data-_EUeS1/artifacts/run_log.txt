@@ -1,0 +1,4 @@
+Searched for public datasets on sex differences in pediatric epilepsy for RNS patients.
+Did not identify a downloadable patient-level public dataset for pediatric RNS outcomes by sex.
+Opened PubMed abstract PMID 39060746 and extracted only directly visible quantitative counts.
+No original sex-stratified statistical analysis was possible from available materials in this run.
