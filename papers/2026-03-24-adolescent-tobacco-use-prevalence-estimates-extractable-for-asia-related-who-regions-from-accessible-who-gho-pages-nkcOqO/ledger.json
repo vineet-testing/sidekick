@@ -1,0 +1,151 @@
+{
+  "artifact_files": [
+    {
+      "artifact_id": "artifact_1",
+      "mime_type": "text/csv",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_extracted.csv",
+      "sha256": "803e9d9aa0a629242f64fa0f6405ed13963b957551755bad2aab8460d6c9c44b"
+    },
+    {
+      "artifact_id": "artifact_2",
+      "mime_type": "text/csv",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_summary.csv",
+      "sha256": "f93f1e7f50588fad8f3b581b13aaeb84f0270488d7f2b0c3df5784683c89c734"
+    },
+    {
+      "artifact_id": "artifact_3",
+      "mime_type": "image/png",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_barplot.png",
+      "sha256": "b4df14b653286db846ce646b4f7743b548fb0ad6ee49950a76e8884f814830de"
+    },
+    {
+      "artifact_id": "artifact_4",
+      "mime_type": "text/plain",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_stats.txt",
+      "sha256": "37ed3870ed74567630e893e90ae6465e77f855cbb2bb8319a8787e283e505b8c"
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "artifact_1",
+      "description": "Structured table of manually extracted country-year-sex adolescent tobacco-related prevalence values visible from WHO snippets during this run.",
+      "kind": "table",
+      "mime_type": "text/csv",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_extracted.csv",
+      "sha256": "803e9d9aa0a629242f64fa0f6405ed13963b957551755bad2aab8460d6c9c44b",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3"
+      ]
+    },
+    {
+      "artifact_id": "artifact_2",
+      "description": "Descriptive statistics by indicator for extracted Asia-related observations only.",
+      "kind": "table",
+      "mime_type": "text/csv",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_summary.csv",
+      "sha256": "f93f1e7f50588fad8f3b581b13aaeb84f0270488d7f2b0c3df5784683c89c734",
+      "source_ids": [
+        "source_2",
+        "source_3"
+      ]
+    },
+    {
+      "artifact_id": "artifact_3",
+      "description": "Bar plot of extracted adolescent tobacco-related prevalence values for Asia-related WHO region observations.",
+      "kind": "figure",
+      "mime_type": "image/png",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_barplot.png",
+      "sha256": "b4df14b653286db846ce646b4f7743b548fb0ad6ee49950a76e8884f814830de",
+      "source_ids": [
+        "source_2",
+        "source_3"
+      ]
+    },
+    {
+      "artifact_id": "artifact_4",
+      "description": "Plain-text summary of descriptive statistics and observed extrema from the extracted dataset.",
+      "kind": "stats",
+      "mime_type": "text/plain",
+      "path": "mnt/data/artifacts/adolescent_tobacco_asia_stats.txt",
+      "sha256": "37ed3870ed74567630e893e90ae6465e77f855cbb2bb8319a8787e283e505b8c",
+      "source_ids": [
+        "source_2",
+        "source_3"
+      ]
+    }
+  ],
+  "limitations": [
+    "The original project theme referred to the 'prevalence of public health info on smoking in Asian teens,' but the accessible direct data found in this run measured adolescent tobacco-use prevalence, not prevalence of public health information exposure or knowledge.",
+    "I could not obtain a complete machine-readable WHO or CDC dataset inside Python during this run because external network retrieval from Python was unavailable and some WHO pages failed to open fully through the web tool.",
+    "The analysis therefore uses only numeric values explicitly visible in accessible WHO snippets, so it is incomplete and should not be interpreted as a full estimate for all Asian countries or all adolescents in Asia.",
+    "The visible Asia-related observations came from Western Pacific entries only; no complete South-East Asia country table was accessible in a form I could extract comprehensively in this run.",
+    "Some extracted values mix related but distinct indicators (current tobacco use, current cigarette smoking, current smokeless tobacco use), so comparisons across indicators should be interpreted cautiously.",
+    "Because the data were manually extracted from accessible snippets, transcription error is possible, though the saved extraction table documents exactly what was used."
+  ],
+  "methods": "I used the web tool to identify directly accessible WHO Global Health Observatory pages and WHO report snippets related to adolescent tobacco use and smoking in Asia. Because live programmatic download from WHO endpoints was not available inside the Python environment in this run, I extracted only explicitly visible numeric country-year-sex prevalence values from accessible WHO search/open results. I then created a structured dataset of those observed values in Python, limited to countries in WHO Western Pacific or South-East Asia regions when summarizing Asia-related observations. I computed descriptive statistics by indicator and created a bar plot and text summary. All files cited below were saved in this run under /mnt/data/artifacts/.",
+  "research_question": "Using directly accessible WHO Global Health Observatory snippets available in this run, what adolescent tobacco-use prevalence values can be extracted for countries in Asia-related WHO regions, and what range of prevalence do those observed values show?",
+  "results": [
+    {
+      "artifact_ids": [
+        "artifact_1",
+        "artifact_2",
+        "artifact_3"
+      ],
+      "result_id": "result_1",
+      "text": "From the accessible WHO snippets in this run, I extracted 12 adolescent tobacco-related prevalence observations for Asia-related WHO regions (all from the Western Pacific region in the visible snippets). Across these extracted observations, current tobacco use in Malaysia reached 29.5% (both sexes, 2016), while the lowest extracted Asia-related value was 1.7% for current smokeless tobacco use among female adolescents in Cambodia (2022)."
+    },
+    {
+      "artifact_ids": [
+        "artifact_2",
+        "artifact_4"
+      ],
+      "result_id": "result_2",
+      "text": "Within the extracted Asia-related observations, mean prevalence was 16.93% for current cigarette smoking (based on the visible Malaysia values only), 13.60% for current tobacco use (based on the visible Malaysia values only), and 3.92% for current smokeless tobacco use (Cambodia, Cook Islands, Fiji, and Micronesia values visible in the accessible WHO snippet). These are descriptive summaries of the extracted visible records only, not regional population-weighted estimates."
+    }
+  ],
+  "sources": [
+    {
+      "accession_id": "turn0search1",
+      "api_endpoint": "",
+      "api_query": "WHO legacy table query with REGION:EMR filter and adolescent tobacco indicators",
+      "download_url": "https://apps.who.int/gho/athena/data/GHO/Youth_svy_yr%2CYouth_svy_national%2CYouth_svy_age_range%2CYouth_survey_title%2CYth_curr_tob_use%2CYth_daily_tob_use%2CYth_curr_tob_smoking%2CYth_daily_tob_smoking%2CYth_curr_cig_smoking%2CYth_daily_cig_smoking.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AEMR%3B&profile=ztable",
+      "label": "WHO GHO Athena snippet: adolescent tobacco smoking/survey table for Eastern Mediterranean region",
+      "landing_page_url": "https://apps.who.int/gho/athena/data/GHO/Youth_svy_yr%2CYouth_svy_national%2CYouth_svy_age_range%2CYouth_survey_title%2CYth_curr_tob_use%2CYth_daily_tob_use%2CYth_curr_tob_smoking%2CYth_daily_tob_smoking%2CYth_curr_cig_smoking%2CYth_daily_cig_smoking.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AEMR%3B&profile=ztable",
+      "notes": "Used only for directly visible numeric snippet values shown by the web tool.",
+      "source_id": "source_1"
+    },
+    {
+      "accession_id": "turn0search2",
+      "api_endpoint": "",
+      "api_query": "WHO legacy table query with REGION:WPR filter and adolescent smokeless tobacco indicators",
+      "download_url": "https://apps.who.int/gho/athena/data/GHO/Yth_nonsmoked_svy_title%2CYth_nonsmoked_svy_yr%2CYth_nonsmoked_national%2CYth_nonsmoked_age_grp%2CYth_curr_smokeless%2CYth_daily_smokeless%2CYth_curr_e-cig%2CYth_daily_e-cig.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AWPR%3B&profile=ztable",
+      "label": "WHO GHO Athena snippet: adolescent smokeless tobacco/e-cigarette table for Western Pacific region",
+      "landing_page_url": "https://apps.who.int/gho/athena/data/GHO/Yth_nonsmoked_svy_title%2CYth_nonsmoked_svy_yr%2CYth_nonsmoked_national%2CYth_nonsmoked_age_grp%2CYth_curr_smokeless%2CYth_daily_smokeless%2CYth_curr_e-cig%2CYth_daily_e-cig.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AWPR%3B&profile=ztable",
+      "notes": "Primary source for Asia-related visible numeric values in this run.",
+      "source_id": "source_2"
+    },
+    {
+      "accession_id": "turn0search15",
+      "api_endpoint": "",
+      "api_query": "Search result snippet for Malaysia adolescent tobacco survey values",
+      "download_url": "https://extranet.who.int/fctcapps/sites/default/files/2023-11/WHO%20Report%20on%20the%20Global%20Tobacco%20Epidemic%202017.pdf",
+      "label": "WHO report on the global tobacco epidemic 2017 snippet containing Malaysian adolescent survey values",
+      "landing_page_url": "https://extranet.who.int/fctcapps/sites/default/files/2023-11/WHO%20Report%20on%20the%20Global%20Tobacco%20Epidemic%202017.pdf",
+      "notes": "Used because the snippet exposed concrete Malaysia prevalence values.",
+      "source_id": "source_3"
+    },
+    {
+      "accession_id": "turn0search3",
+      "api_endpoint": "",
+      "api_query": "Indicator metadata lookup for adolescent tobacco prevalence",
+      "download_url": "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/past-30-day-prevalence-of-tobacco-use-among-adolescents",
+      "label": "WHO GHO metadata page for adolescent tobacco-use prevalence indicator",
+      "landing_page_url": "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/past-30-day-prevalence-of-tobacco-use-among-adolescents",
+      "notes": "Used to confirm the indicator family context, not for numeric extraction.",
+      "source_id": "source_4"
+    }
+  ],
+  "title": "Adolescent tobacco-use prevalence estimates extractable for Asia-related WHO regions from accessible WHO GHO pages"
+}
