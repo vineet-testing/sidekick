@@ -1,3 +1,3 @@
 # Sidekick Research
 
-This repository stores reproducible paper bundles published by Sidekick.
+This repository stores reproducible paper and memo bundles published by Sidekick.
