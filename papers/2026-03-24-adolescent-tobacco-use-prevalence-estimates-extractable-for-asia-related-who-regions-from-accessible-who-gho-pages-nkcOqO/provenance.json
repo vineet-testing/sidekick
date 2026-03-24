@@ -1,0 +1,25 @@
+{
+  "accessed_domains": [
+    "apps.who.int",
+    "extranet.who.int",
+    "www.who.int"
+  ],
+  "external_sources": [
+    "https://apps.who.int/gho/athena/data/GHO/Youth_svy_yr%2CYouth_svy_national%2CYouth_svy_age_range%2CYouth_survey_title%2CYth_curr_tob_use%2CYth_daily_tob_use%2CYth_curr_tob_smoking%2CYth_daily_tob_smoking%2CYth_curr_cig_smoking%2CYth_daily_cig_smoking.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AEMR%3B&profile=ztable",
+    "https://apps.who.int/gho/athena/data/GHO/Youth_svy_yr%2CYouth_svy_national%2CYouth_svy_age_range%2CYouth_survey_title%2CYth_curr_tob_use%2CYth_daily_tob_use%2CYth_curr_tob_smoking%2CYth_daily_tob_smoking%2CYth_curr_cig_smoking%2CYth_daily_cig_smoking.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AEMR%3B&profile=ztable",
+    "https://apps.who.int/gho/athena/data/GHO/Yth_nonsmoked_svy_title%2CYth_nonsmoked_svy_yr%2CYth_nonsmoked_national%2CYth_nonsmoked_age_grp%2CYth_curr_smokeless%2CYth_daily_smokeless%2CYth_curr_e-cig%2CYth_daily_e-cig.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AWPR%3B&profile=ztable",
+    "https://apps.who.int/gho/athena/data/GHO/Yth_nonsmoked_svy_title%2CYth_nonsmoked_svy_yr%2CYth_nonsmoked_national%2CYth_nonsmoked_age_grp%2CYth_curr_smokeless%2CYth_daily_smokeless%2CYth_curr_e-cig%2CYth_daily_e-cig.html?ead=&filter=COUNTRY%3A%2A%3BREGION%3AWPR%3B&profile=ztable",
+    "https://extranet.who.int/fctcapps/sites/default/files/2023-11/WHO%20Report%20on%20the%20Global%20Tobacco%20Epidemic%202017.pdf",
+    "https://extranet.who.int/fctcapps/sites/default/files/2023-11/WHO%20Report%20on%20the%20Global%20Tobacco%20Epidemic%202017.pdf",
+    "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/past-30-day-prevalence-of-tobacco-use-among-adolescents",
+    "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/past-30-day-prevalence-of-tobacco-use-among-adolescents"
+  ],
+  "left_trusted_set": false,
+  "notes": "Using directly accessible WHO Global Health Observatory snippets available in this run, what adolescent tobacco-use prevalence values can be extracted for countries in Asia-related WHO regions, and what range of prevalence do those observed values show?",
+  "used_dataset_ids": [
+    "turn0search1",
+    "turn0search15",
+    "turn0search2",
+    "turn0search3"
+  ]
+}
