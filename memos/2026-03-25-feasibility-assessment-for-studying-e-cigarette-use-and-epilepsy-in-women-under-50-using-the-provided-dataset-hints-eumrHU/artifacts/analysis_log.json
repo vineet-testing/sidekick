@@ -1,0 +1,11 @@
+{
+  "candidate_urls": [
+    "https://raw.githubusercontent.com/shivaniRaut/Diabetese-Prediction/main/diabetes_binary_health_indicators_BRFSS2015.csv",
+    "https://raw.githubusercontent.com/shivaniRaut/Diabetese-Prediction/master/diabetes_binary_health_indicators_BRFSS2015.csv",
+    "https://raw.githubusercontent.com/swimmingbrain/decoding-diabetes/main/project_files/diabetes_binary_health_indicators_BRFSS2015.csv",
+    "https://raw.githubusercontent.com/swimmingbrain/decoding-diabetes/master/project_files/diabetes_binary_health_indicators_BRFSS2015.csv",
+    "https://raw.githubusercontent.com/anandprakash0/Diabetes-prediction/main/data/diabetes_binary_health_indicators_BRFSS2015.csv",
+    "https://raw.githubusercontent.com/anandprakash0/Diabetes-prediction/master/data/diabetes_binary_health_indicators_BRFSS2015.csv"
+  ],
+  "message": "No accessible direct raw CSV mirror found from provided hint during this run."
+}
