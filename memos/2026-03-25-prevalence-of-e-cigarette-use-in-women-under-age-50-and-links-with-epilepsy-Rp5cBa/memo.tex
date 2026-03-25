@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{tabularx}
+
+\usepackage{caption}
+
+\usepackage{float}
+
+\usepackage{microtype}
+
+\usepackage{mathptmx}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+
+\setlength{\parindent}{1.25em}
+
+\setlength{\parskip}{0pt}
+
+\title{Prevalence of e-cigarette use in women under age 50 and links with epilepsy}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\small\textit{Research Memo}\end{center}
+
+\begin{abstract}
+
+This memo addresses the research question of whether the provided materials could support an empirical estimate of e-cigarette use prevalence among women younger than 50 years and test an association with epilepsy in that subgroup. In this run, a reproducible retrieval attempt was made using the hinted BRFSS 2015 GitHub raw CSV endpoints, but no usable study dataset was obtained. The accessible file hints corresponded to a BRFSS 2015 diabetes health indicators extract rather than a survey file designed for tobacco or neurology analyses. Because no dataset containing both e-cigarette use and epilepsy variables for women under 50 was available in analyzable form, no empirical prevalence estimate or association result could be reported.
+
+\end{abstract}
+
+\section{Introduction}
+The guiding question for this memo was whether the provided dataset hints could support an epidemiologic assessment of e-cigarette use in women under age 50 and whether e-cigarette use is associated with epilepsy in that subgroup. This is a focused question that requires a source with demographic information, a measure of e-cigarette use, and a measure of epilepsy, all available in a population-relevant file. The materials available in this run did not resolve to such a source. Instead, the retrievable hints pointed to a BRFSS 2015 diabetes indicators extract, which is not a suitable basis for the requested analysis. The purpose of this memo is therefore to document the work performed, the scope of the attempted retrieval, and the reason no substantive empirical finding is reported.
+
+\section{Methods}
+I inspected the user-provided dataset hints and attempted a reproducible retrieval from the explicitly suggested BRFSS 2015 GitHub raw CSV endpoints. The attempted sources were the two listed BRFSS diabetes health indicators endpoints: \cite{ref1} and \cite{ref2}. I evaluated these hints against the research question to determine whether they could plausibly support analysis of e-cigarette use and epilepsy among women under 50. The accessible BRFSS mirror was a diabetes health indicators extract, not a tobacco or neurology survey file, and no usable study dataset was obtained during this run. Because no source among the provided hints exposed both the exposure and outcome variables needed for the subgroup analysis, I did not proceed to any inferential modeling or prevalence estimation.
+
+\section{Results}
+No approved empirical results were available for reporting in this run. The only verifiable outcome of the work was that attempted retrieval of the hinted BRFSS 2015 diabetes indicators files did not yield a usable dataset for analysis \cite{ref1} \cite{ref2}. As a result, there is no artifact-backed prevalence estimate for e-cigarette use among women under 50 and no supported test of association with epilepsy. The key pattern from the attempted work is therefore absence of an analyzable source rather than a measured epidemiologic association.
+
+\section{Discussion}
+This memo shows that the research question is sound but could not be answered from the materials successfully accessed in this run. The attempted BRFSS-based retrieval was useful only in establishing that the hinted source was not the correct operational dataset for the target variables. The lack of a usable file containing both e-cigarette use and epilepsy measures prevented any honest estimate of prevalence or linkage in women under 50. The appropriate interpretation is not that there is no association, but that this run did not obtain the necessary evidence to evaluate the question. Future work would require a dataset that explicitly includes the target subgroup, a measure of e-cigarette use, and a measure of epilepsy.
+
+\section{Limitations}
+The central limitation is that the available hint resolved to a reduced BRFSS diabetes indicators file rather than a dataset designed for tobacco and epilepsy analyses. In this run, I could not retrieve a usable dataset file from the hinted GitHub raw endpoints, so no empirical estimate or association model could be executed honestly. The other hinted datasets were unrelated to population prevalence of e-cigarette use in women under 50 and were not appropriate substitutes for this epidemiologic question. Without a dataset containing both e-cigarette use and epilepsy variables in the target subgroup, any claimed prevalence or linkage result would be unsupported.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
