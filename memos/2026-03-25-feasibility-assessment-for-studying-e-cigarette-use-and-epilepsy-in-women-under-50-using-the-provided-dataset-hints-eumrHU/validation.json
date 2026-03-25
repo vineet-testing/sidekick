@@ -1,0 +1,36 @@
+{
+  "approved_result_ids": [],
+  "approved_results": [],
+  "dropped_results": [],
+  "final_format": "memo",
+  "manuscript_kind": "memo",
+  "memo_reasons": [
+    "no artifact-backed original results survived validation",
+    "no original result resolved to a real saved artifact"
+  ],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": false,
+    "has_original_result": false
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "GitHub repository metadata for BRFSS 2015 diabetes indicators subset. Accession: swimmingbrain/decoding-diabetes. https://github.com/swimmingbrain/decoding-diabetes. Repository README describes a 2015 BRFSS-derived diabetes indicators dataset with 21 features such as BMI, age, income, smoking, physical activity, general health, high blood pressure, and cholesterol; not e-cigarette use or epilepsy."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "CDC 2015 BRFSS questionnaire. Accession: 2015-brfss-questionnaire-12-29-14. https://www.cdc.gov/brfss/questionnaires/pdf-ques/2015-brfss-questionnaire-12-29-14.pdf. Used only to verify that BRFSS 2015 had tobacco-related questionnaire content in the full survey, distinguishing the full instrument from the smaller diabetes-indicators subset."
+    },
+    {
+      "key": "ref3",
+      "source_id": "source_3",
+      "text": "Attempted direct raw GitHub mirror retrievals for BRFSS 2015 diabetes indicators CSV. Accession: retrieval-attempt-log. https://raw.githubusercontent.com/. All candidate direct-download attempts failed in this run; details saved as an artifact log."
+    }
+  ],
+  "status": "memo",
+  "summary": "Routing to a research memo because the run did not clear the paper gate.",
+  "validation_issues": []
+}
