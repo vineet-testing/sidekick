@@ -1,0 +1,15 @@
+{
+  "accessed_domains": [
+    "github.com",
+    "raw.githubusercontent.com"
+  ],
+  "external_sources": [
+    "https://raw.githubusercontent.com/anandprakash0/Diabetes-prediction/main/data/diabetes_012_health_indicators_BRFSS2015.csv",
+    "https://github.com/anandprakash0/Diabetes-prediction"
+  ],
+  "left_trusted_set": false,
+  "notes": "Among women younger than 50 years, what is the prevalence of e-cigarette use, and is e-cigarette use associated with epilepsy in a publicly accessible dataset available from the materials provided for this run?",
+  "used_dataset_ids": [
+    "anandprakash0/Diabetes-prediction:data/diabetes_012_health_indicators_BRFSS2015.csv"
+  ]
+}
