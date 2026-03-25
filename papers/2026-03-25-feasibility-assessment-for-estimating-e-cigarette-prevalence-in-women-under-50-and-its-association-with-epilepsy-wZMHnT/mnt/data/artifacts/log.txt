@@ -1,0 +1,4 @@
+Attempted to retrieve suggested datasets via web search/open.
+Available BRFSS mirror located was a diabetes-indicators subset without e-cigarette or epilepsy variables.
+Python environment has no internet access for direct download; web tool search/open did not provide downloadable CSV contents into the container.
+Therefore original empirical analysis of e-cigarette prevalence in women under 50 and association with epilepsy was not possible in this run.
