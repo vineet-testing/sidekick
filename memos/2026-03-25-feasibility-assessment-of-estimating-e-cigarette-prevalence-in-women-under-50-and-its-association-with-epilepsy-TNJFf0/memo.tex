@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{tabularx}
+
+\usepackage{caption}
+
+\usepackage{float}
+
+\usepackage{microtype}
+
+\usepackage{mathptmx}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+
+\setlength{\parindent}{1.25em}
+
+\setlength{\parskip}{0pt}
+
+\title{Feasibility assessment of estimating e-cigarette prevalence in women under 50 and its association with epilepsy}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\small\textit{Research Memo}\end{center}
+
+\begin{abstract}
+
+This memo assessed whether a publicly accessible survey microdata source could be retrieved in this run to estimate current e-cigarette use among U.S. women younger than 50 years and examine its association with self-reported epilepsy. The work translated the idea into a cross-sectional observational question and searched for a dataset containing sex, age, current e-cigarette use, and epilepsy status. Official CDC BRFSS 2022 documentation was verified to include the calculated current e-cigarette-use variable \_CURECI2, but no usable respondent-level microdata file was successfully retrieved in the execution environment. Because no analytic dataset was obtained, no prevalence estimate, figure, table, or association analysis could be produced. The run instead documents the search process, the verified documentation, and the retrieval failure. \cite{ref1} \cite{ref2} \cite{ref3}
+
+\end{abstract}
+
+\section{Introduction}
+Current e-cigarette use among women younger than 50 years is a relevant public health question, and an additional question is whether use is associated with self-reported epilepsy in a survey dataset that can be analyzed transparently. The intended research question for this run was: among U.S. women younger than 50 years, what is the prevalence of current e-cigarette use, and is current e-cigarette use associated with self-reported epilepsy in a publicly accessible survey dataset retrievable in this environment? To support that question, the run focused on identifying a dataset with the minimum required variables and confirming that the relevant e-cigarette measure exists in current BRFSS documentation. \cite{ref1} \cite{ref2}
+
+\section{Methods}
+The work was conducted as a feasibility-oriented cross-sectional observational search. First, the idea was translated into a request for public microdata containing, at minimum, sex, age, current e-cigarette use, and epilepsy status. Second, web searches were performed for BRFSS sources and documentation, with attention to the user-provided dataset hint and official CDC materials. Third, the official CDC BRFSS 2022 calculated variables documentation was reviewed and confirmed that \_CURECI2 is the calculated current e-cigarette-use variable derived from ECIGNOW2. Fourth, a candidate GitHub CSV mirror referenced in the user hint was inspected conceptually, but it was recognized as a reduced diabetes-focused dataset rather than an appropriate source for the stated question. Finally, a direct retrieval attempt for a raw CSV mirror was made, but the environment could not download a usable microdata file from raw.githubusercontent.com, and no alternative directly retrievable microdata source containing both e-cigarette use and epilepsy was obtained during this run. A run log was saved to document the search and retrieval outcome. \cite{ref1} \cite{ref2} \cite{ref3}
+
+\section{Results}
+No approved empirical results were produced in this run. The main outcome was a feasibility finding: official CDC BRFSS 2022 documentation confirms the presence of a calculated current e-cigarette-use variable (\_CURECI2), but the execution environment did not yield a usable respondent-level dataset for analysis. The run log in \ref{tab:artifact-1} documents the search for a dataset with e-cigarette use, sex, age, and epilepsy; the verification of BRFSS e-cigarette documentation; and the failure to retrieve an analyzable microdata file. Because no analytic dataset was retrieved, no weighted prevalence estimate, regression model, or other association estimate was generated.
+
+\begin{table}[tbp]
+\centering
+\caption{Run log documenting dataset search, verification of BRFSS e-cigarette variable documentation, and failure to retrieve a usable microdata file for analysis in this environment.}
+\label{tab:artifact-1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}}
+\toprule
+Searched CDC and GitHub mirrors for a dataset containing e-cigarette use & sex/age & and epilepsy. Available hinted BRFSS 2015 diabetes mirror lacks e-cigarette and  & but raw data could not be downloaded in this environment. No source with direct  \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Discussion}
+This run shows that the research question is methodologically well defined but not yet analytically executable in the current environment. The verified CDC documentation indicates that a current e-cigarette-use variable exists in BRFSS 2022, which is consistent with the proposed exposure definition. However, a documented microdata retrieval failure prevented construction of an analysis dataset with the required variables, and the user-suggested GitHub mirror was not suitable for the intended e-cigarette/epilepsy analysis because it is a reduced diabetes-oriented file. As a result, the present output is a research memo rather than a results paper. The main value of the run is that it narrows the next step to obtaining a directly downloadable BRFSS respondent-level file with the relevant variables before any prevalence or association analysis can proceed. \cite{ref1} \cite{ref2} \cite{ref3}
+
+\section{Limitations}
+No usable microdata file was retrieved in this run, so no prevalence estimate or association analysis was executed. The user-provided BRFSS 2015 diabetes GitHub mirror is a reduced diabetes-focused dataset and is not an appropriate source for an e-cigarette/epilepsy study as framed here. Although official CDC BRFSS 2022 documentation confirms that a current e-cigarette variable exists, the underlying respondent-level file was not obtained in this environment. Without a retrieved analytic dataset, no tables, figures, regression estimates, or weighted prevalence calculations could be produced. Therefore, any claim about prevalence or association would be speculative, and this memo intentionally reports no empirical findings.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
