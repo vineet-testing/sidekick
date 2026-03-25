@@ -1,0 +1,20 @@
+{
+  "accessed_domains": [
+    "www.cdc.gov"
+  ],
+  "external_sources": [
+    "https://www.cdc.gov/brfss/annual_data/annual_2015.html",
+    "https://www.cdc.gov/brfss/annual_data/annual_2015.html",
+    "https://www.cdc.gov/brfss/annual_data/2015/pdf/codebook15_llcp.pdf",
+    "https://www.cdc.gov/brfss/annual_data/annual_2015.html",
+    "https://www.cdc.gov/brfss/annual_data/2015/files/LLCP2015XPT.zip",
+    "https://www.cdc.gov/brfss/annual_data/annual_2015.html"
+  ],
+  "left_trusted_set": false,
+  "notes": "Among women younger than 50 years, what is the prevalence of e-cigarette use, and is e-cigarette use associated with a history of epilepsy or seizures in available public data?",
+  "used_dataset_ids": [
+    "BRFSS-2015-annual-data-page",
+    "LLCP2015XPT.zip",
+    "codebook15_llcp"
+  ]
+}
