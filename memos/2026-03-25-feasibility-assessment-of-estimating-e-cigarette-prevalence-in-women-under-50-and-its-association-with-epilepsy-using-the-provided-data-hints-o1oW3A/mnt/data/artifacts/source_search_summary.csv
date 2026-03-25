@@ -1,0 +1,5 @@
+dataset_id,suitability,reason
+brfss-2015-github-mirror,insufficient,accessible mirror appears diabetes-focused; no e-cigarette or epilepsy variables available in inspected metadata/search results
+mast-observations,not relevant,astronomy archive unrelated to public-health question
+dandi-api,not relevant,neuroscience archive may include epilepsy data but not population ecig prevalence
+nci-gdc-api,not relevant,oncology metadata unrelated to ecig prevalence and epilepsy in general population
