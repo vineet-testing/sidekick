@@ -1,0 +1,31 @@
+{
+  "approved_result_ids": [],
+  "approved_results": [],
+  "dropped_results": [],
+  "final_format": "memo",
+  "manuscript_kind": "memo",
+  "memo_reasons": [
+    "no artifact-backed original results survived validation",
+    "no original result resolved to a real saved artifact"
+  ],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": false,
+    "has_original_result": false
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "Suggested BRFSS 2015 diabetes health indicators GitHub raw CSV endpoint (attempted retrieval). Accession: diabetes_binary_health_indicators_BRFSS2015.csv. https://raw.githubusercontent.com/anandprakash0/Diabetes-prediction/main/data/diabetes_binary_health_indicators_BRFSS2015.csv. Attempted because it matched the dataset hint. Retrieval did not yield a usable file in this run."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "Alternative likely GitHub raw CSV endpoint for BRFSS 2015 diabetes indicators (attempted retrieval). Accession: diabetes_binary_health_indicators_BRFSS2015.csv. https://raw.githubusercontent.com/swimmingbrain/diabetes-prediction/main/data/diabetes_binary_health_indicators_BRFSS2015.csv. Attempted as a fallback based on search results referencing the same derived BRFSS diabetes file. Retrieval did not yield a usable file in this run."
+    }
+  ],
+  "status": "memo",
+  "summary": "Routing to a research memo because the run did not clear the paper gate.",
+  "validation_issues": []
+}
