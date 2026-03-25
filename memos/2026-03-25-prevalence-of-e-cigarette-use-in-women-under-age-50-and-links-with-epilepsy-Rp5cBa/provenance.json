@@ -1,0 +1,17 @@
+{
+  "accessed_domains": [
+    "github.com",
+    "raw.githubusercontent.com"
+  ],
+  "external_sources": [
+    "https://raw.githubusercontent.com/anandprakash0/Diabetes-prediction/main/data/diabetes_binary_health_indicators_BRFSS2015.csv",
+    "https://github.com/anandprakash0/Diabetes-prediction",
+    "https://raw.githubusercontent.com/swimmingbrain/diabetes-prediction/main/data/diabetes_binary_health_indicators_BRFSS2015.csv",
+    "https://github.com/swimmingbrain/diabetes-prediction"
+  ],
+  "left_trusted_set": false,
+  "notes": "Can the provided datasets support an empirical estimate of e-cigarette use prevalence among women younger than 50 years, and can they test an association between e-cigarette use and epilepsy in that subgroup?",
+  "used_dataset_ids": [
+    "diabetes_binary_health_indicators_BRFSS2015.csv"
+  ]
+}
