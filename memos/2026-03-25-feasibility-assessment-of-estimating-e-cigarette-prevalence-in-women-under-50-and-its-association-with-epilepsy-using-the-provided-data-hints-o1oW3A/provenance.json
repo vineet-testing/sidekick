@@ -1,0 +1,14 @@
+{
+  "accessed_domains": [
+    "github.com"
+  ],
+  "external_sources": [
+    "https://github.com/swimmingbrain/decoding-diabetes"
+  ],
+  "left_trusted_set": false,
+  "notes": "Using the datasets provided in this run, can we estimate the prevalence of e-cigarette use among women younger than 50 years and test whether e-cigarette use is associated with epilepsy?",
+  "used_dataset_ids": [
+    "turn0search0",
+    "turn3view0"
+  ]
+}
