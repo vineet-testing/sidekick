@@ -1,0 +1,7 @@
+This run evaluated the user question 'Epilepsy in pediatric Asian populations how much is refractory' against the provided dataset hints:
+- BRFSS 2015 Diabetes Health Indicators: unrelated to epilepsy or pediatrics.
+- NCI Genomic Data Commons API: oncology metadata, unrelated to epilepsy prevalence in Asian children.
+- MAST Archive and Catalogs: astronomy data, unrelated.
+- DANDI Archive API: neuroscience archive potentially relevant to epilepsy recordings, but the search results available in this run did not identify a specific dandiset or metadata field set that would support estimating the prevalence of refractory epilepsy in pediatric Asian populations.
+
+I also searched the web for open data specifically on pediatric epilepsy refractory prevalence in Asia. Returned results were literature pages and reviews, not a directly retrievable primary dataset suitable for an original empirical estimate in this run. Therefore, meaningful original quantitative analysis answering the exact question was not possible with the available materials.
