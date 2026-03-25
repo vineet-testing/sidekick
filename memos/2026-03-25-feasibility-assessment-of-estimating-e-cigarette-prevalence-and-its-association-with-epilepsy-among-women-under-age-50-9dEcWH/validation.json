@@ -1,0 +1,36 @@
+{
+  "approved_result_ids": [],
+  "approved_results": [],
+  "dropped_results": [],
+  "final_format": "memo",
+  "manuscript_kind": "memo",
+  "memo_reasons": [
+    "no artifact-backed original results survived validation",
+    "no original result resolved to a real saved artifact"
+  ],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": false,
+    "has_original_result": false
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "CDC 2015 BRFSS Survey Data and Documentation page. Accession: BRFSS-2015-annual-data-page. https://www.cdc.gov/brfss/annual_data/annual_2015.html. Official landing page listing 2015 BRFSS overview, codebook, and data-file links; inspected to confirm dataset structure and file availability."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "CDC BRFSS 2015 Codebook Report PDF. Accession: codebook15_llcp. https://www.cdc.gov/brfss/annual_data/2015/pdf/codebook15_llcp.pdf. Official codebook inspected by text search for e-cigarette, vaping, epilepsy, and seizure terms; no matching variables were surfaced in the accessible combined-file codebook view used here."
+    },
+    {
+      "key": "ref3",
+      "source_id": "source_3",
+      "text": "CDC BRFSS 2015 SAS Transport archive. Accession: LLCP2015XPT.zip. https://www.cdc.gov/brfss/annual_data/2015/files/LLCP2015XPT.zip. Attempted direct retrieval in Python for local analysis; download failed in this run because of container network resolution failure."
+    }
+  ],
+  "status": "memo",
+  "summary": "Routing to a research memo because the run did not clear the paper gate.",
+  "validation_issues": []
+}
