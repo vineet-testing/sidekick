@@ -1,0 +1,31 @@
+{
+  "approved_result_ids": [],
+  "approved_results": [],
+  "dropped_results": [],
+  "final_format": "memo",
+  "manuscript_kind": "memo",
+  "memo_reasons": [
+    "no artifact-backed original results survived validation",
+    "no original result resolved to a real saved artifact"
+  ],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": false,
+    "has_original_result": false
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "GitHub mirror project describing the BRFSS-derived diabetes indicators dataset. Accession: swimmingbrain/decoding-diabetes. https://github.com/swimmingbrain/decoding-diabetes. Used to verify that the accessible mirrored BRFSS-derived dataset is diabetes-focused and based on a reduced feature set, not obviously suitable for e-cigarette/epilepsy analysis."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "CDC BRFSS 2015 annual survey data page. Accession: BRFSS-2015. https://www.cdc.gov/brfss/annual_data/annual_2015.html. Used as contextual provenance that full BRFSS 2015 exists separately from the reduced GitHub diabetes-indicators mirror."
+    }
+  ],
+  "status": "memo",
+  "summary": "Routing to a research memo because the run did not clear the paper gate.",
+  "validation_issues": []
+}
