@@ -1,0 +1,20 @@
+{
+  "accessed_domains": [
+    "github.com",
+    "raw.githubusercontent.com",
+    "www.cdc.gov"
+  ],
+  "external_sources": [
+    "https://github.com/swimmingbrain/decoding-diabetes",
+    "https://www.cdc.gov/brfss/questionnaires/pdf-ques/2015-brfss-questionnaire-12-29-14.pdf",
+    "https://www.cdc.gov/brfss/questionnaires/pdf-ques/2015-brfss-questionnaire-12-29-14.pdf",
+    "https://raw.githubusercontent.com/"
+  ],
+  "left_trusted_set": false,
+  "notes": "Among women younger than 50 years in a public U.S. health dataset, what is the prevalence of e-cigarette use, and is e-cigarette use associated with epilepsy?",
+  "used_dataset_ids": [
+    "2015-brfss-questionnaire-12-29-14",
+    "retrieval-attempt-log",
+    "swimmingbrain/decoding-diabetes"
+  ]
+}
