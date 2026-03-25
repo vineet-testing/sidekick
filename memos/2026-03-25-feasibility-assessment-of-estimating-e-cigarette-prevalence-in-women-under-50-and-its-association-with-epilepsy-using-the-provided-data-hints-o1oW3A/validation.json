@@ -1,0 +1,31 @@
+{
+  "approved_result_ids": [],
+  "approved_results": [],
+  "dropped_results": [],
+  "final_format": "memo",
+  "manuscript_kind": "memo",
+  "memo_reasons": [
+    "no artifact-backed original results survived validation",
+    "no original result resolved to a real saved artifact"
+  ],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": false,
+    "has_original_result": false
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "GitHub repository page indicating the accessible BRFSS mirror is a diabetes-focused derived dataset rather than a full BRFSS file with e-cigarette and epilepsy variables. Accession: turn3view0. web.open. Repository README states the project uses a Kaggle Diabetes Health Indicators dataset derived from CDC BRFSS 2015 with diabetes-related predictors such as BMI, smoking, physical activity, blood pressure, and general health."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "Web search results for BRFSS 2015 diabetes mirror and related descriptions. Accession: turn0search0. web.search_query. Search results consistently described the mirrored dataset as a diabetes health indicators dataset with a limited set of derived variables, not a full tobacco-and-neurology surveillance file."
+    }
+  ],
+  "status": "memo",
+  "summary": "Routing to a research memo because the run did not clear the paper gate.",
+  "validation_issues": []
+}
