@@ -1,0 +1,22 @@
+{
+  "accessed_domains": [
+    "github.com",
+    "raw.githubusercontent.com",
+    "www.cdc.gov"
+  ],
+  "external_sources": [
+    "https://www.cdc.gov/brfss/annual_data/annual_2022.html",
+    "https://www.cdc.gov/brfss/annual_data/annual_2022.html",
+    "https://www.cdc.gov/brfss/annual_data/2022/pdf/2022-calculated-variables-version4-508.pdf",
+    "https://www.cdc.gov/brfss/annual_data/2022/pdf/2022-calculated-variables-version4-508.pdf",
+    "https://raw.githubusercontent.com/anandprakash0/Diabetes-prediction/main/data/diabetes_binary_5050split_health_indicators_BRFSS2015.csv",
+    "https://github.com/anandprakash0/Diabetes-prediction"
+  ],
+  "left_trusted_set": false,
+  "notes": "Among U.S. women younger than 50 years, what is the prevalence of current e-cigarette use, and is current e-cigarette use associated with self-reported epilepsy in a publicly accessible survey dataset retrievable in this run?",
+  "used_dataset_ids": [
+    "2022-calculated-variables-version4-508",
+    "BRFSS-2022-annual-data-page",
+    "diabetes_binary_5050split_health_indicators_BRFSS2015.csv"
+  ]
+}
