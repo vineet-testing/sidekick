@@ -1,0 +1,14 @@
+{
+  "accessed_domains": [
+    "aepi.biomedcentral.com"
+  ],
+  "external_sources": [
+    "https://aepi.biomedcentral.com/counter/pdf/10.1186/s42494-023-00136-1.pdf",
+    "https://aepi.biomedcentral.com/counter/pdf/10.1186/s42494-023-00136-1.pdf"
+  ],
+  "left_trusted_set": false,
+  "notes": "Can the prevalence of refractory epilepsy among pediatric populations in Asia be estimated using the datasets and retrievable sources available in this run?",
+  "used_dataset_ids": [
+    "turn0search12"
+  ]
+}
