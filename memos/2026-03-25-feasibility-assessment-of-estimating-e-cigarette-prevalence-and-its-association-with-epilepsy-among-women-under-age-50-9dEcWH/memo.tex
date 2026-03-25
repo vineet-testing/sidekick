@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{tabularx}
+
+\usepackage{caption}
+
+\usepackage{float}
+
+\usepackage{microtype}
+
+\usepackage{mathptmx}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+
+\setlength{\parindent}{1.25em}
+
+\setlength{\parskip}{0pt}
+
+\title{Feasibility assessment of estimating e-cigarette prevalence and its association with epilepsy among women under age 50}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\small\textit{Research Memo}\end{center}
+
+\begin{abstract}
+
+This memo assessed whether a public-data analysis could be completed for the question of e-cigarette use prevalence and its possible association with epilepsy or seizures among women younger than 50 years. The work focused on the 2015 Behavioral Risk Factor Surveillance System because it was suggested as a candidate source and because official CDC documentation was available. I inspected the CDC 2015 BRFSS survey-data page, reviewed the 2015 combined codebook, and searched the accessible codebook text for terms related to e-cigarettes, vaping, epilepsy, and seizures. I also attempted direct retrieval of the BRFSS 2015 transport archive for local analysis. The inspection did not surface usable matching variables in the accessible codebook view, and the download attempt failed because of network name-resolution failure inside the container. As a result, no verified analytic dataset was obtained and no original prevalence estimate, confidence interval, or association model could be produced honestly.
+
+\end{abstract}
+
+\section{Introduction}
+The research question was whether, among women younger than 50 years, e-cigarette use could be measured in available public data and whether it was associated with a history of epilepsy or seizures. This question was framed as a cross-sectional observational problem and evaluated against retrievable public data sources. The intended analysis required a dataset that jointly measured the exposure and outcome of interest, along with enough documentation to support valid computation. In this run, the evidence base was limited to official CDC BRFSS materials and an attempted data download. Because the validated record does not contain approved analytic results, this memo is necessarily a feasibility assessment rather than an empirical results paper \cite{ref1} \cite{ref2} \cite{ref3}.
+
+\section{Methods}
+I translated the topic into a cross-sectional observational question and evaluated whether an honest empirical analysis could be completed with the available public-data options. I prioritized BRFSS 2015 because it was suggested in the dataset hints and because the official CDC survey-data page for that year was accessible \cite{ref1}. I opened the CDC 2015 BRFSS codebook PDF and searched the accessible text for terms related to e-cigarettes, vaping, epilepsy, and seizures. I then attempted direct retrieval of the BRFSS 2015 SAS transport archive in Python to support local computation. The container could not resolve the external host during download, preventing the microdata from being materialized locally \cite{ref2} \cite{ref3}. Because no verified dataset was obtained that jointly measured e-cigarette use and epilepsy or seizure history for women under 50 years, no unsupported analysis was run and no estimates were fabricated. A run-log artifact was saved to document the failed feasibility path and the reasons analysis could not proceed.
+
+\section{Results}
+No approved empirical findings were validated for this run. The only artifact-backed pattern is that the requested analysis could not be executed honestly with the available and retrievable data. The run log in \ref{tab:artifact-1} records that the accessible 2015 combined codebook did not surface e-cigarette, vaping, epilepsy, or seizure variables in the inspected view, and that the direct BRFSS 2015 archive download failed inside the container because of network resolution failure. Taken together, these checks show that no original prevalence estimate, confidence interval, or association analysis was produced in this run.
+
+\begin{table}[tbp]
+\centering
+\caption{Run log documenting why the requested empirical analysis could not be executed honestly with available and retrievable data in this run.}
+\label{tab:artifact-1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}}
+\toprule
+Unable to execute the requested empirical study because no dataset among the pro & but the 2015 combined codebook did not expose e-cigarette or epilepsy variables  & and the container could not directly download large external data files for anal & no original prevalence estimate or association analysis could be computed honest \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Discussion}
+The main conclusion is procedural rather than substantive: the planned question is reasonable, but the run did not clear the data-access and variable-verification steps needed for an honest estimate. The BRFSS 2015 documentation page confirmed the existence of official survey materials, but the inspected codebook view did not reveal the needed variables, and the microdata archive could not be retrieved for local analysis \cite{ref1} \cite{ref2} \cite{ref3}. In a study of this kind, both the exposure and outcome must be verified in a usable analytic file before prevalence or association claims are made. Because that condition was not met here, the appropriate output is a feasibility memo documenting what was attempted and why no results are reported.
+
+\section{Limitations}
+No usable microdata source was successfully materialized in this run that jointly measured e-cigarette use and epilepsy or seizure history for women under age 50. The official CDC 2015 BRFSS documentation page was accessible, but text search of the accessible 2015 combined codebook did not surface e-cigarette, vaping, epilepsy, or seizure variables in the inspected file. Python-based direct download of the BRFSS 2015 transport archive failed because of network name-resolution failure inside the container, preventing local computation. Because no verified analytic dataset was obtained, no original prevalence estimate, confidence interval, or association model could be produced honestly.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
