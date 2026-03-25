@@ -1,0 +1,36 @@
+{
+  "approved_result_ids": [],
+  "approved_results": [],
+  "dropped_results": [],
+  "final_format": "memo",
+  "manuscript_kind": "memo",
+  "memo_reasons": [
+    "no artifact-backed original results survived validation",
+    "no original result resolved to a real saved artifact"
+  ],
+  "paper_checks": {
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": false,
+    "has_original_result": false
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "CDC BRFSS 2022 Survey Data and Documentation landing page. Accession: BRFSS-2022-annual-data-page. https://www.cdc.gov/brfss/annual_data/annual_2022.html. Official CDC page confirming availability of 2022 BRFSS documentation and downloadable materials; opened during this run."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "CDC Calculated Variables in the 2022 BRFSS Data File. Accession: 2022-calculated-variables-version4-508. https://www.cdc.gov/brfss/annual_data/2022/pdf/2022-calculated-variables-version4-508.pdf. Official PDF opened during this run; confirms _CURECI2 is the calculated current e-cigarette-use variable derived from ECIGNOW2."
+    },
+    {
+      "key": "ref3",
+      "source_id": "source_3",
+      "text": "BRFSS 2015 Diabetes Health Indicators GitHub mirror referenced in user hint. Accession: diabetes_binary_5050split_health_indicators_BRFSS2015.csv. https://raw.githubusercontent.com/anandprakash0/Diabetes-prediction/main/data/diabetes_binary_5050split_health_indicators_BRFSS2015.csv. Candidate CSV mirror suggested by the user hint. Retrieval was attempted from raw.githubusercontent.com in this run but failed due network/DNS resolution in the execution environment."
+    }
+  ],
+  "status": "memo",
+  "summary": "Routing to a research memo because the run did not clear the paper gate.",
+  "validation_issues": []
+}
