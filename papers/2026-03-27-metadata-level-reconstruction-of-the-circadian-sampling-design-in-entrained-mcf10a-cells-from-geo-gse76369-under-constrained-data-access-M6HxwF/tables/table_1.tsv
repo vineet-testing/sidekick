@@ -1,0 +1,9 @@
+gsm	time_h	gpr_file	channel	pair_time_h	cell_line	phenotype_harmonized
+GSM1982275	0	GSE76369_0042.gpr	Cy3	16	MCF10A	epithelial, non-tumorigenic / noncancerous
+GSM1982276	4	GSE76369_0219.gpr	Cy3	20	MCF10A	epithelial, non-tumorigenic / noncancerous
+GSM1982277	8	GSE76369_0041.gpr	Cy3	24	MCF10A	epithelial, non-tumorigenic / noncancerous
+GSM1982278	12	GSE76369_0220.gpr	Cy3	28	MCF10A	epithelial, non-tumorigenic / noncancerous
+GSM1982279	16	GSE76369_0042.gpr	Cy5	0	MCF10A	epithelial, non-tumorigenic / noncancerous
+GSM1982280	20	GSE76369_0219.gpr	Cy5	4	MCF10A	epithelial, non-tumorigenic / noncancerous
+GSM1982281	24	GSE76369_0041.gpr	Cy5	8	MCF10A	epithelial, non-tumorigenic / noncancerous
+GSM1982282	28	GSE76369_0220.gpr	Cy5	12	MCF10A	epithelial, non-tumorigenic / noncancerous
