@@ -1,0 +1,676 @@
+{
+  "artifact_files": [
+    {
+      "artifact_id": "artifact_1",
+      "mime_type": "text/x-python",
+      "path": "mnt/data/analysis/run_analysis.py",
+      "sha256": "f43c217249a733ec0ac4422ebd34918519aa70f2f453b7a32b7fa24845331d86"
+    },
+    {
+      "artifact_id": "artifact_2",
+      "mime_type": "text/markdown",
+      "path": "mnt/data/analysis_summary.md",
+      "sha256": "fd23c3edd6f1843c6b1ace31e2b73976d32c39a3373b91c5ccd2e8dc9c3e810e"
+    },
+    {
+      "artifact_id": "artifact_3",
+      "mime_type": "text/tab-separated-values",
+      "path": "mnt/data/tables/sample_metadata.tsv",
+      "sha256": "3ef5216c04e540f53fe6d317b1435aa4f5f082775ca26aaf279c8b0c5006eaad"
+    },
+    {
+      "artifact_id": "artifact_4",
+      "mime_type": "text/tab-separated-values",
+      "path": "mnt/data/tables/raw_pairing_design.tsv",
+      "sha256": "983291867a07d4c38ba52f625013100316c698589676552ecfbc00519078e11b"
+    },
+    {
+      "artifact_id": "artifact_5",
+      "mime_type": "text/tab-separated-values",
+      "path": "mnt/data/logs/network_attempts.tsv",
+      "sha256": "05977c677ef48cec5dfd573d2d9eb4d4bd781227f027968c6ba92ddb9ef14a95"
+    },
+    {
+      "artifact_id": "artifact_6",
+      "mime_type": "image/png",
+      "path": "mnt/data/figures/figure_1_design_timeline.png",
+      "sha256": "3eaf2540156680c80af346a9c531a6059f63cfb500c59762b280d4db3febf753"
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "artifact_1",
+      "description": "Executable script that recreates the metadata-only handoff artifacts and documents the blocked GEO reconstruction workflow.",
+      "kind": "code",
+      "mime_type": "text/x-python",
+      "path": "mnt/data/analysis/run_analysis.py",
+      "sha256": "f43c217249a733ec0ac4422ebd34918519aa70f2f453b7a32b7fa24845331d86",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ]
+    },
+    {
+      "artifact_id": "artifact_2",
+      "description": "Narrative analysis handoff summarizing attempted downloads, blockers, metadata-derived outputs, and recommended next steps.",
+      "kind": "log",
+      "mime_type": "text/markdown",
+      "path": "mnt/data/analysis_summary.md",
+      "sha256": "fd23c3edd6f1843c6b1ace31e2b73976d32c39a3373b91c5ccd2e8dc9c3e810e",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ]
+    },
+    {
+      "artifact_id": "artifact_3",
+      "description": "Metadata table for the 8 MCF10A time points with harmonized phenotype wording and ordered sampling times.",
+      "kind": "table",
+      "mime_type": "text/tab-separated-values",
+      "path": "mnt/data/tables/sample_metadata.tsv",
+      "sha256": "3ef5216c04e540f53fe6d317b1435aa4f5f082775ca26aaf279c8b0c5006eaad",
+      "source_ids": [
+        "source_1",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ]
+    },
+    {
+      "artifact_id": "artifact_4",
+      "description": "Table encoding the inferred four raw two-color pairings and their Cy3/Cy5 channel assignments across the 16-hour offsets.",
+      "kind": "table",
+      "mime_type": "text/tab-separated-values",
+      "path": "mnt/data/tables/raw_pairing_design.tsv",
+      "sha256": "983291867a07d4c38ba52f625013100316c698589676552ecfbc00519078e11b",
+      "source_ids": [
+        "source_1",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ]
+    },
+    {
+      "artifact_id": "artifact_5",
+      "description": "Reproducible log of failed network attempts to access GEO resources required for matrix reconstruction.",
+      "kind": "log",
+      "mime_type": "text/tab-separated-values",
+      "path": "mnt/data/logs/network_attempts.tsv",
+      "sha256": "05977c677ef48cec5dfd573d2d9eb4d4bd781227f027968c6ba92ddb9ef14a95",
+      "source_ids": [
+        "source_1",
+        "source_2"
+      ]
+    },
+    {
+      "artifact_id": "artifact_6",
+      "description": "Timeline figure showing the eight sampling times and the four inferred Cy3/Cy5 raw pairings spanning 16 hours.",
+      "kind": "figure",
+      "mime_type": "image/png",
+      "path": "mnt/data/figures/figure_1_design_timeline.png",
+      "sha256": "3eaf2540156680c80af346a9c531a6059f63cfb500c59762b280d4db3febf753",
+      "source_ids": [
+        "source_1",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ]
+    }
+  ],
+  "attempt": 1,
+  "code_summary": "The saved Python script reproduces the metadata-only packaging workflow for GSE76369: it records blocked GEO access, creates the sample metadata and raw-pairing design tables from supplied accession metadata, generates the timeline figure, and writes the handoff materials. It does not perform expression-matrix reconstruction or circadian modeling because the required numeric GEO files were unavailable in the sandbox.",
+  "dataset": {
+    "accession_id": "GSE76369",
+    "domain": "eutils.ncbi.nlm.nih.gov",
+    "download_url": "",
+    "label": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+    "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+    "notes": "Resolved directly from an explicit GEO accession."
+  },
+  "dataset_profile": {
+    "analyzable": true,
+    "available_assets": [
+      "Series page for GSE76369 with study-level metadata, sample list, platform, and file inventory. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "8 processed sample tables: GSM1982275, GSM1982276, GSM1982277, GSM1982278, GSM1982279, GSM1982280, GSM1982281, GSM1982282; each has columns ID_REF and VALUE (normalized) and 44,544 rows. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))",
+      "GPL21250 platform annotation table with columns ID, Block, Column, Row, Symbol, Name, ORF, SPOT_ID and 44,544 rows. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250))",
+      "Series Matrix File(s) TXT link listed on GEO landing page. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "SOFT formatted family file(s) link listed on GEO landing page. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "MINiML formatted family file(s) link listed on GEO landing page. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "Raw supplementary GenePix files listed on GEO: GSE76369_0041.gpr.gz, GSE76369_0042.gpr.gz, GSE76369_0219.gpr.txt.gz, GSE76369_0220.gpr.gz. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "Raw/channel pairing recoverable from sample pages: 0h/16h share 0042.gpr as Cy3/Cy5; 4h/20h share 0219.gpr as Cy3/Cy5; 8h/24h share 0041.gpr as Cy3/Cy5; 12h/28h share 0220.gpr as Cy3/Cy5. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))"
+    ],
+    "blocking_reason": "",
+    "constraints": [
+      "Only 8 time points are present in this SubSeries (0-28 h in 4 h steps), with no replicate structure shown on the series page. This limits statistical power for rhythmicity inference. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "Processed data are stored as per-sample normalized single-channel values in separate GSM tables, so a matrix must be reconstructed before analysis. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))",
+      "Platform is a 44,544-probe spotted oligonucleotide array with duplicate/control-like spots and probe-to-gene many-to-one mapping likely requiring collapse/annotation handling. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250))",
+      "Raw data are two-color GenePix files; any raw-level reprocessing must respect Cy3/Cy5 channel orientation and the 16-hour pairing design. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))",
+      "Metadata contain an apparent wording inconsistency: MCF10A is described in the series summary/growth protocol as noncancerous, while sample characteristics say 'breast cancer epitheleal cell line'; downstream agents should harmonize phenotype labels carefully. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "The methods text says cells were harvested every 4 hours for 48 hours, but this SubSeries exposes only the first 8 time points through 28 hours; do not assume a full 48-hour MCF10A matrix is present in GSE76369 itself. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))"
+    ],
+    "dataset": {
+      "accession_id": "GSE76369",
+      "download_url": "",
+      "label": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+      "notes": "Primary analyzable substrate is the processed sample tables embedded in GSM1982275-GSM1982282 plus GPL21250 probe annotation. GEO also lists one Series Matrix TXT link, SOFT/MINiML family links, and 4 raw GenePix supplementary files. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))"
+    },
+    "profile_summary": "GSE76369 is a GEO SubSeries for entrained MCF10A cells with 8 RNA samples collected at 0, 4, 8, 12, 16, 20, 24, and 28 hours after serum shock. The assay is expression profiling by array on GPL21250 (Human Exonic Evidence Based Oligonucleotide / HEEBO array), and the GEO pages expose processed per-sample normalized expression tables with 44,544 probe rows per sample plus platform annotation for 44,544 probes. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+    "retrieval_summary": "Inspected the GEO Series page, representative/all needed GSM sample pages, and the GPL21250 platform page directly from NCBI GEO. The tool surfaced file inventory, sample metadata, raw-file/channel mappings, and processed table headers/row counts. Direct file-download endpoints were linked from GEO, but inspection here relied on the HTML-accessible sample/platform tables rather than fetching the compressed files themselves. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+    "sources": [
+      {
+        "accession_id": "GSE76369",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Series GSE76369",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+        "notes": "Study-level metadata, sample list, platform link, and raw/supplementary file inventory. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+        "source_id": "source_1"
+      },
+      {
+        "accession_id": "GPL21250",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Platform GPL21250",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250",
+        "notes": "Probe annotation table with headers ID, Block, Column, Row, Symbol, Name, ORF, SPOT_ID; 44,544 rows. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250))",
+        "source_id": "source_2"
+      },
+      {
+        "accession_id": "GSM1982275",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982275",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275",
+        "notes": "MCF10A 0h sample page; processed table headers and row count; raw mapping cy3 of 0042.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))",
+        "source_id": "source_3"
+      },
+      {
+        "accession_id": "GSM1982279",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982279",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982279",
+        "notes": "MCF10A 16h sample page; processed table headers and row count; raw mapping cy5 of 0042.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982279))",
+        "source_id": "source_4"
+      },
+      {
+        "accession_id": "GSM1982276",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982276",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276",
+        "notes": "MCF10A 4h sample page; raw mapping cy3 of 0219.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276))",
+        "source_id": "source_5"
+      },
+      {
+        "accession_id": "GSM1982280",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982280",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982280",
+        "notes": "MCF10A 20h sample page; raw mapping cy5 of 0219.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982280))",
+        "source_id": "source_6"
+      },
+      {
+        "accession_id": "GSM1982277",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982277",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277",
+        "notes": "MCF10A 8h sample page; raw mapping cy3 of 0041.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277))",
+        "source_id": "source_7"
+      },
+      {
+        "accession_id": "GSM1982281",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982281",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982281",
+        "notes": "MCF10A 24h sample page; raw mapping cy5 of 0041.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982281))",
+        "source_id": "source_8"
+      },
+      {
+        "accession_id": "GSM1982278",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982278",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982278",
+        "notes": "MCF10A 12h sample page; raw mapping cy3 of 0220.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982278))",
+        "source_id": "source_9"
+      },
+      {
+        "accession_id": "GSM1982282",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982282",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982282",
+        "notes": "MCF10A 28h sample page; raw mapping cy5 of 0220.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982282))",
+        "source_id": "source_10"
+      }
+    ],
+    "suggested_analysis_targets": [
+      "Reconstruct the processed probe-level expression matrix (44,544 probes x 8 samples) from GSM1982275-GSM1982282. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))",
+      "Map ID_REF probe IDs to GPL21250 annotations (gene symbol/name/spot metadata) and quantify duplicated/unannotated probes before any gene-level summaries. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250))",
+      "Time-ordered expression profiling within MCF10A for known circadian genes/pathways using the processed normalized values. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))",
+      "If raw reprocessing is needed, validate the four array-pair files and channel assignments against the sample-page descriptions before recomputing expression values. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))"
+    ]
+  },
+  "execution_handoff": {
+    "completed_experiments": [
+      "Attempted re-download of GSE76369 series/sample/platform resources needed for probe-matrix reconstruction; saved reproducible failure log to logs/network_attempts.tsv.",
+      "Constructed metadata-level sample table for the 8 MCF10A time points and harmonized the phenotype wording into a non-tumorigenic epithelial description; saved to tables/sample_metadata.tsv.",
+      "Reconstructed the four inferred raw two-color 16-hour pairings from the provided GEO metadata and saved to tables/raw_pairing_design.tsv.",
+      "Generated a same-dataset design/timeline figure summarizing time points and Cy3/Cy5 raw pairings; saved to figures/figure_1_design_timeline.png.",
+      "Saved a concise narrative handoff to analysis_summary.md and an executable reproduction script to analysis/run_analysis.py."
+    ],
+    "execution_summary": "I first attempted the selected experiments exactly as planned: re-download GEO resources for GSE76369/GPL21250 and reconstruct the processed expression matrix for temporal analysis. In this compute sandbox, all network requests to NCBI GEO failed and there were no cached local data files, so the numeric probe/sample tables required for matrix reconstruction were unavailable. Following the requested same-dataset pivot, I produced a metadata-only handoff from the supplied dataset profile: sample-time metadata, raw two-color pairing design, a study-design figure, a reproducible network-attempt log, and an executable script that recreates these artifacts.",
+    "failed_experiments": [
+      "exp_1: Reconstruct and QC the processed probe-level and gene-level time-course matrix. Failed because the sandbox could not access NCBI GEO and no local copies of the GSM processed tables or GPL21250 annotation were present.",
+      "exp_2: Conservative circadian-like temporal ranking of genes across the 8 sampled time points. Failed because exp_1 could not produce a numeric expression matrix."
+    ],
+    "figure_summaries": [
+      {
+        "artifact_id": "figures/figure_1_design_timeline.png",
+        "path": "figures/figure_1_design_timeline.png",
+        "summary_markdown": "A timeline of the 8 sampled time points after serum shock (0 through 28 h in 4 h steps). Blue points mark Cy3 samples and red points mark Cy5 samples. Black connector bars show the four inferred raw two-color pairings, each spanning 16 hours: 0/16, 4/20, 8/24, and 12/28. This figure documents the study design available from metadata only; it does not display expression values.",
+        "title": "GSE76369 MCF10A sample schedule and two-color raw pairings"
+      }
+    ],
+    "findings": [
+      "The accessible dataset structure, based on the supplied profile, is an 8-sample MCF10A time course at 0, 4, 8, 12, 16, 20, 24, and 28 hours after serum shock.",
+      "The raw-design metadata imply four two-color pairings offset by 16 hours: 0/16 on 0042.gpr, 4/20 on 0219.gpr, 8/24 on 0041.gpr, and 12/28 on 0220.gpr.",
+      "The study remains intrinsically limited for formal rhythmicity claims because only 8 time points are exposed here and visible biological replicate structure is absent from the provided series profile.",
+      "The phenotype wording inconsistency can be harmonized conservatively as MCF10A epithelial, non-tumorigenic/noncancerous, rather than propagating the contradictory sample-page phrasing.",
+      "No expression-level or gene-level circadian findings were generated in this run because numeric GEO tables were unavailable offline."
+    ],
+    "limitations": [
+      "This sandbox has no internet access, so the required GEO sample tables, series matrix, and platform annotation could not be re-downloaded.",
+      "No cached local copy of GSE76369 processed or raw numeric data was present in /mnt/data.",
+      "Because the numeric substrate was unavailable, no probe alignment, annotation QC, PCA/correlation QC, probe-collapse sensitivity analysis, or harmonic/cosinor ranking could be run.",
+      "The pivot artifacts are metadata-only and should be treated as a preparatory handoff, not as biological results."
+    ],
+    "packaging_notes": "Artifacts were written under /mnt/data and referenced here with workspace-relative paths. The executable reproduction script is analysis/run_analysis.py. Because the GEO numeric tables were inaccessible offline, no expression matrices or downstream circadian ranking tables were produced in this run.",
+    "research_question": "Circadian gene expression in MCF10A across the 8 sampled time points in GEO GSE76369.",
+    "saved_artifact_paths": [
+      "analysis/run_analysis.py",
+      "analysis_summary.md",
+      "tables/sample_metadata.tsv",
+      "tables/raw_pairing_design.tsv",
+      "logs/network_attempts.tsv",
+      "figures/figure_1_design_timeline.png"
+    ],
+    "sources": [
+      {
+        "accession_id": "GSE76369",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Series GSE76369",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+        "notes": "Study-level metadata, sample list, platform link, and raw/supplementary file inventory.",
+        "source_id": "source_1"
+      },
+      {
+        "accession_id": "GPL21250",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Platform GPL21250",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250",
+        "notes": "Probe annotation table referenced for the intended probe-to-gene join.",
+        "source_id": "source_2"
+      },
+      {
+        "accession_id": "GSM1982275",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982275",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275",
+        "notes": "MCF10A 0h sample; profile notes indicate Cy3 on 0042.gpr.",
+        "source_id": "source_3"
+      },
+      {
+        "accession_id": "GSM1982279",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982279",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982279",
+        "notes": "MCF10A 16h sample; profile notes indicate Cy5 on 0042.gpr.",
+        "source_id": "source_4"
+      },
+      {
+        "accession_id": "GSM1982276",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982276",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276",
+        "notes": "MCF10A 4h sample; profile notes indicate Cy3 on 0219.gpr.",
+        "source_id": "source_5"
+      },
+      {
+        "accession_id": "GSM1982280",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982280",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982280",
+        "notes": "MCF10A 20h sample; profile notes indicate Cy5 on 0219.gpr.",
+        "source_id": "source_6"
+      },
+      {
+        "accession_id": "GSM1982277",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982277",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277",
+        "notes": "MCF10A 8h sample; profile notes indicate Cy3 on 0041.gpr.",
+        "source_id": "source_7"
+      },
+      {
+        "accession_id": "GSM1982281",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982281",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982281",
+        "notes": "MCF10A 24h sample; profile notes indicate Cy5 on 0041.gpr.",
+        "source_id": "source_8"
+      },
+      {
+        "accession_id": "GSM1982278",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982278",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982278",
+        "notes": "MCF10A 12h sample; profile notes indicate Cy3 on 0220.gpr.",
+        "source_id": "source_9"
+      },
+      {
+        "accession_id": "GSM1982282",
+        "api_endpoint": "",
+        "api_query": "",
+        "download_url": "",
+        "label": "NCBI GEO Sample GSM1982282",
+        "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982282",
+        "notes": "MCF10A 28h sample; profile notes indicate Cy5 on 0220.gpr.",
+        "source_id": "source_10"
+      }
+    ]
+  },
+  "execution_plan": {
+    "deferred_experiments": [
+      "Raw two-color GenePix reprocessing using the four .gpr files and explicit Cy3/Cy5 channel orientation checks",
+      "Any replicate-based statistical rhythmicity testing or genome-wide false discovery claims requiring stronger design support",
+      "Assuming or reconstructing a full 48 h MCF10A series from this accession alone"
+    ],
+    "execution_focus": "Prioritize data reconstruction, annotation handling, and low-assumption temporal ranking over aggressive rhythmicity claims. Use the processed normalized values as the primary substrate, and treat raw two-color files as a fallback only if the processed matrix cannot be made internally consistent.",
+    "plan_summary": "Build a trustworthy 8-time-point MCF10A expression matrix from the processed GEO sample tables, then run a conservative time-course screen for circadian-like behavior that respects the dataset's main limits: no visible replicates, only 0-28 h coverage, and probe-to-gene ambiguity on GPL21250.",
+    "selected_experiments": [
+      {
+        "expected_artifacts": [
+          "probe_expression_matrix.tsv",
+          "gene_expression_matrix_collapsed.tsv",
+          "sample_metadata.tsv",
+          "probe_annotation_qc.tsv",
+          "qc_plots.pdf",
+          "annotation_and_collapse_decisions.md"
+        ],
+        "experiment_id": "exp_1",
+        "fallback_if_blocked": "If the processed tables are inconsistent or insufficiently aligned, switch to the GEO Series Matrix file as the reconstruction source. If annotation joins remain ambiguous, continue with probe-level analysis first and defer gene-level collapse until after temporal ranking.",
+        "method_summary": "Parse GSM1982275-GSM1982282 into one probe-by-sample matrix keyed by ID_REF. Attach exact time labels (0, 4, 8, 12, 16, 20, 24, 28 h). Join GPL21250 annotations by probe ID, then summarize annotation completeness, duplicated symbols, blank symbols, and control-like entries. Produce both a probe-level matrix and a conservative gene-level matrix using a simple documented rule such as retaining all probes plus one collapsed view per gene (for example, highest across-time variance or median across probes). Run basic QC on sample distributions, missingness, rank correlations, PCA/MDS, and time-order sanity checks. Explicitly harmonize sample phenotype text as MCF10A epithelial/non-tumorigenic rather than propagating the wording inconsistency blindly.",
+        "rationale": "The usable substrate is distributed across 8 separate GSM tables and a platform annotation table. Before any biological interpretation, the analyst needs a single aligned matrix, explicit sample-time metadata, and a documented probe-to-gene collapse strategy because GPL21250 likely contains duplicated and sparsely annotated probes.",
+        "success_criteria": "All 8 samples align to a common 44,544-probe index with negligible join loss; time labels are unambiguous; annotation coverage and duplicate-probe burden are quantified; no sample appears grossly corrupted or mislabeled; and at least one defensible gene-level representation is available for downstream temporal screening.",
+        "title": "Reconstruct and QC the processed probe-level and gene-level time-course matrix"
+      },
+      {
+        "expected_artifacts": [
+          "temporal_gene_ranking.tsv",
+          "candidate_circadian_genes.tsv",
+          "cosinor_or_harmonic_fit_summary.tsv",
+          "sensitivity_across_probe_collapse_rules.tsv",
+          "timecourse_plots_top_candidates.pdf",
+          "pathway_level_temporal_summary.pdf"
+        ],
+        "experiment_id": "exp_2",
+        "fallback_if_blocked": "If harmonic fitting is unstable because of sparse coverage or probe noise, fall back to descriptive temporal ranking based on variance, adjacent-time smoothness, and curated circadian gene inspection, and restrict conclusions to exploratory pattern discovery.",
+        "method_summary": "Using the QC-passed matrix, evaluate temporal structure with methods suited to sparse ordered samples: amplitude/range ranking, smoothness across adjacent time points, and a simple 24 h harmonic/cosinor fit with phase and amplitude estimates reported descriptively rather than as strong inferential claims. Analyze both probe-level and collapsed gene-level views to check robustness. Prioritize interpretation around known circadian regulators and pathway-level summaries rather than relying only on single-gene p-values. Include sensitivity checks comparing results under alternative probe-collapse rules and, where helpful, inspect the expected offset relationships among times separated by the raw pairing design.",
+        "rationale": "The research question is circadian expression in MCF10A, but this SubSeries has limited temporal depth and no visible replicates. The best near-term analysis is a cautious screen for genes and pathways showing smooth 24 h-like structure or strong time dependence, not a definitive rhythmicity call set.",
+        "success_criteria": "A stable shortlist of candidate circadian-associated genes/pathways emerges across reasonable preprocessing choices, with visibly structured time courses and interpretable phase/amplitude estimates. The final write-up clearly distinguishes 'circadian-like temporal behavior in this 8-point series' from formal replicated rhythmicity evidence.",
+        "title": "Conservative circadian-like temporal ranking of genes across the 8 sampled time points"
+      }
+    ]
+  },
+  "experiment_summary": "The run attempted to reconstruct the processed GEO expression matrix for GSE76369 and perform conservative temporal analysis, but all network access to NCBI GEO failed and no local cached numeric data were available. As a same-dataset fallback, the run packaged metadata-only artifacts: a harmonized sample metadata table, an inferred raw two-color pairing design table, a design timeline figure, a network failure log, a narrative summary, and a reproduction script.",
+  "experiments": [
+    "Attempted re-download of GEO series, sample, and platform resources required to reconstruct the processed 44,544-probe by 8-sample matrix; requests failed in the sandbox and the failure attempts were logged.",
+    "Constructed a metadata-only sample table for the 8 MCF10A time points and harmonized phenotype wording to a conservative non-tumorigenic epithelial description.",
+    "Reconstructed the inferred raw two-color 16-hour pairing design from GEO metadata for the four GenePix files.",
+    "Generated a timeline figure summarizing the eight time points and the four Cy3/Cy5 pairings.",
+    "Saved a reproducible Python script and narrative handoff documenting the blocked matrix reconstruction workflow."
+  ],
+  "figure_summaries": [
+    {
+      "artifact_id": "artifact_6",
+      "summary_markdown": "A timeline of the 8 sampled time points after serum shock (0 through 28 h in 4 h steps). Blue points mark Cy3 samples and red points mark Cy5 samples. Black connector bars show the four inferred raw two-color pairings, each spanning 16 hours: 0/16, 4/20, 8/24, and 12/28. This is a study-design figure derived from metadata only and does not show expression values.",
+      "title": "Figure 1"
+    }
+  ],
+  "findings": [
+    "The accessible study structure is an 8-sample MCF10A time course with measurements at 0, 4, 8, 12, 16, 20, 24, and 28 hours after serum shock.",
+    "Metadata imply four raw two-color pairings separated by 16 hours: 0/16 on 0042.gpr, 4/20 on 0219.gpr, 8/24 on 0041.gpr, and 12/28 on 0220.gpr.",
+    "The dataset is limited for strong rhythmicity inference because only 8 time points are exposed in this SubSeries and no visible biological replicate structure is provided in the profile.",
+    "The phenotype wording inconsistency can be harmonized conservatively as MCF10A epithelial and non-tumorigenic/noncancerous.",
+    "No expression-level, probe-level, or gene-level circadian results were produced in this run because the GEO numeric tables were unavailable offline."
+  ],
+  "limitations": [
+    "This sandbox could not access NCBI GEO, so the GSM processed tables, series matrix, and GPL21250 annotation could not be downloaded during execution.",
+    "No cached local copy of the processed or raw numeric data was present in the workspace.",
+    "Without the numeric substrate, probe alignment, annotation QC, sample QC, dimensionality reduction, probe-collapse analysis, and temporal ranking could not be executed.",
+    "The resulting artifacts are metadata-only preparatory materials and should not be interpreted as biological expression results."
+  ],
+  "research_question": "What circadian-related gene expression structure can be recovered for MCF10A cells across the 8 sampled time points in GEO GSE76369, and what metadata-level design information is available when expression tables cannot be downloaded in the current sandbox?",
+  "results": [
+    {
+      "artifact_ids": [
+        "artifact_3",
+        "artifact_6"
+      ],
+      "note_ids": [],
+      "result_id": "result_1",
+      "text": "A metadata-level sample schedule for GSE76369 was reconstructed, confirming 8 MCF10A samples collected every 4 hours from 0 to 28 hours after serum shock."
+    },
+    {
+      "artifact_ids": [
+        "artifact_4",
+        "artifact_6"
+      ],
+      "note_ids": [],
+      "result_id": "result_2",
+      "text": "The inferred raw array design consists of four two-color pairings separated by 16 hours, with earlier samples assigned to Cy3 and later samples to Cy5 within each pair."
+    },
+    {
+      "artifact_ids": [
+        "artifact_5",
+        "artifact_2",
+        "artifact_1"
+      ],
+      "note_ids": [],
+      "result_id": "result_3",
+      "text": "Expression-matrix reconstruction and downstream circadian ranking could not be completed because GEO resources were unreachable and no local numeric data were available."
+    },
+    {
+      "artifact_ids": [
+        "artifact_2",
+        "artifact_3"
+      ],
+      "note_ids": [],
+      "result_id": "result_4",
+      "text": "The produced outputs are a preparatory same-dataset handoff rather than biological expression findings, with phenotype wording harmonized conservatively to non-tumorigenic epithelial MCF10A."
+    }
+  ],
+  "search": {
+    "dataset": {
+      "accession_id": "GSE76369",
+      "domain": "eutils.ncbi.nlm.nih.gov",
+      "download_url": "",
+      "label": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+      "notes": "Resolved directly from an explicit GEO accession."
+    },
+    "existing_work_gap": "Selected Identification of circadian-related gene expression profiles in entrained MCF10A from NCBI GEO Functional Genomics as the primary empirical source.",
+    "novelty_rationale": "Selected Identification of circadian-related gene expression profiles in entrained MCF10A from NCBI GEO Functional Genomics as the primary empirical source.",
+    "related_work": [],
+    "research_question": "Circadian gene expression in MCF10A",
+    "selected_agent": "resolver"
+  },
+  "sources": [
+    {
+      "accession_id": "GSE76369",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Series GSE76369",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+      "notes": "Study-level metadata, sample list, platform link, and supplementary file inventory.",
+      "source_id": "source_1"
+    },
+    {
+      "accession_id": "GPL21250",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Platform GPL21250",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250",
+      "notes": "Platform annotation referenced for intended probe-to-gene joining.",
+      "source_id": "source_2"
+    },
+    {
+      "accession_id": "GSM1982275",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982275",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275",
+      "notes": "MCF10A 0h sample; profile notes indicate Cy3 on 0042.gpr.",
+      "source_id": "source_3"
+    },
+    {
+      "accession_id": "GSM1982279",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982279",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982279",
+      "notes": "MCF10A 16h sample; profile notes indicate Cy5 on 0042.gpr.",
+      "source_id": "source_4"
+    },
+    {
+      "accession_id": "GSM1982276",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982276",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276",
+      "notes": "MCF10A 4h sample; profile notes indicate Cy3 on 0219.gpr.",
+      "source_id": "source_5"
+    },
+    {
+      "accession_id": "GSM1982280",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982280",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982280",
+      "notes": "MCF10A 20h sample; profile notes indicate Cy5 on 0219.gpr.",
+      "source_id": "source_6"
+    },
+    {
+      "accession_id": "GSM1982277",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982277",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277",
+      "notes": "MCF10A 8h sample; profile notes indicate Cy3 on 0041.gpr.",
+      "source_id": "source_7"
+    },
+    {
+      "accession_id": "GSM1982281",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982281",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982281",
+      "notes": "MCF10A 24h sample; profile notes indicate Cy5 on 0041.gpr.",
+      "source_id": "source_8"
+    },
+    {
+      "accession_id": "GSM1982278",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982278",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982278",
+      "notes": "MCF10A 12h sample; profile notes indicate Cy3 on 0220.gpr.",
+      "source_id": "source_9"
+    },
+    {
+      "accession_id": "GSM1982282",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "",
+      "label": "NCBI GEO Sample GSM1982282",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982282",
+      "notes": "MCF10A 28h sample; profile notes indicate Cy5 on 0220.gpr.",
+      "source_id": "source_10"
+    }
+  ],
+  "title": "Circadian-related gene expression profiles in entrained MCF10A cells"
+}
