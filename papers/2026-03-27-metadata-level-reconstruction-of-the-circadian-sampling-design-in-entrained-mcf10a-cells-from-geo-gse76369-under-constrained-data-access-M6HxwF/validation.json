@@ -1,0 +1,239 @@
+{
+  "approved_result_ids": [
+    "result_1",
+    "result_2",
+    "result_3",
+    "result_4"
+  ],
+  "approved_results": [
+    {
+      "artifact_ids": [
+        "artifact_3",
+        "artifact_6"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_1",
+      "source_ids": [
+        "source_1",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ],
+      "text": "A metadata-level sample schedule for GSE76369 was reconstructed, confirming 8 MCF10A samples collected every 4 hours from 0 to 28 hours after serum shock."
+    },
+    {
+      "artifact_ids": [
+        "artifact_4",
+        "artifact_6"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_2",
+      "source_ids": [
+        "source_1",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ],
+      "text": "The inferred raw array design consists of four two-color pairings separated by 16 hours, with earlier samples assigned to Cy3 and later samples to Cy5 within each pair."
+    },
+    {
+      "artifact_ids": [
+        "artifact_5",
+        "artifact_2",
+        "artifact_1"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_3",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ],
+      "text": "Expression-matrix reconstruction and downstream circadian ranking could not be completed because GEO resources were unreachable and no local numeric data were available."
+    },
+    {
+      "artifact_ids": [
+        "artifact_2",
+        "artifact_3"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_4",
+      "source_ids": [
+        "source_1",
+        "source_2",
+        "source_3",
+        "source_4",
+        "source_5",
+        "source_6",
+        "source_7",
+        "source_8",
+        "source_9",
+        "source_10"
+      ],
+      "text": "The produced outputs are a preparatory same-dataset handoff rather than biological expression findings, with phenotype wording harmonized conservatively to non-tumorigenic epithelial MCF10A."
+    }
+  ],
+  "dropped_results": [],
+  "final_format": "paper",
+  "manuscript_kind": "paper",
+  "memo_reasons": [],
+  "missing_note_ids": [],
+  "paper_checks": {
+    "covers_requested_notes": true,
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": true,
+    "has_original_result": true,
+    "uses_resolved_primary_dataset": true
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "NCBI GEO Series GSE76369. GSE76369. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369. Study-level metadata, sample list, platform link, and supplementary file inventory."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "NCBI GEO Platform GPL21250. GPL21250. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250. Platform annotation referenced for intended probe-to-gene joining."
+    },
+    {
+      "key": "ref3",
+      "source_id": "source_3",
+      "text": "NCBI GEO Sample GSM1982275. GSM1982275. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275. MCF10A 0h sample; profile notes indicate Cy3 on 0042.gpr."
+    },
+    {
+      "key": "ref4",
+      "source_id": "source_4",
+      "text": "NCBI GEO Sample GSM1982279. GSM1982279. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982279. MCF10A 16h sample; profile notes indicate Cy5 on 0042.gpr."
+    },
+    {
+      "key": "ref5",
+      "source_id": "source_5",
+      "text": "NCBI GEO Sample GSM1982276. GSM1982276. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276. MCF10A 4h sample; profile notes indicate Cy3 on 0219.gpr."
+    },
+    {
+      "key": "ref6",
+      "source_id": "source_6",
+      "text": "NCBI GEO Sample GSM1982280. GSM1982280. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982280. MCF10A 20h sample; profile notes indicate Cy5 on 0219.gpr."
+    },
+    {
+      "key": "ref7",
+      "source_id": "source_7",
+      "text": "NCBI GEO Sample GSM1982277. GSM1982277. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277. MCF10A 8h sample; profile notes indicate Cy3 on 0041.gpr."
+    },
+    {
+      "key": "ref8",
+      "source_id": "source_8",
+      "text": "NCBI GEO Sample GSM1982281. GSM1982281. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982281. MCF10A 24h sample; profile notes indicate Cy5 on 0041.gpr."
+    },
+    {
+      "key": "ref9",
+      "source_id": "source_9",
+      "text": "NCBI GEO Sample GSM1982278. GSM1982278. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982278. MCF10A 12h sample; profile notes indicate Cy3 on 0220.gpr."
+    },
+    {
+      "key": "ref10",
+      "source_id": "source_10",
+      "text": "NCBI GEO Sample GSM1982282. GSM1982282. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982282. MCF10A 28h sample; profile notes indicate Cy5 on 0220.gpr."
+    }
+  ],
+  "resolution": {
+    "acceptable_units": [
+      "cell",
+      "sample"
+    ],
+    "blocking_reason": null,
+    "candidates": [
+      {
+        "access_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+        "api_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gds&retmode=json&id=200076369",
+        "dataset_id": "GSE76369",
+        "download_urls": [],
+        "evidence_count": 8,
+        "family_id": "geo_functional_genomics",
+        "family_label": "NCBI GEO Functional Genomics",
+        "modalities": [
+          "gene_expression",
+          "cancer_genomics",
+          "clinical_cohort",
+          "general_empirical"
+        ],
+        "primary_domain": "eutils.ncbi.nlm.nih.gov",
+        "provenance_note": "Resolved directly from an explicit GEO accession.",
+        "qualifies_as_primary_data": true,
+        "score": 144.4,
+        "summary": "Expression profiling by array | samples: 8",
+        "title": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+        "trusted_domains": [
+          "eutils.ncbi.nlm.nih.gov",
+          "ncbi.nlm.nih.gov"
+        ],
+        "unit_of_analysis": "sample_or_series"
+      }
+    ],
+    "incompatible_primary_family_ids": [
+      "openalex_literature",
+      "pubmed_literature"
+    ],
+    "inferred_modalities": [
+      "gene_expression"
+    ],
+    "paper_mode": "empirical_dataset",
+    "selected_candidate": {
+      "access_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+      "api_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gds&retmode=json&id=200076369",
+      "dataset_id": "GSE76369",
+      "download_urls": [],
+      "evidence_count": 8,
+      "family_id": "geo_functional_genomics",
+      "family_label": "NCBI GEO Functional Genomics",
+      "modalities": [
+        "gene_expression",
+        "cancer_genomics",
+        "clinical_cohort",
+        "general_empirical"
+      ],
+      "primary_domain": "eutils.ncbi.nlm.nih.gov",
+      "provenance_note": "Resolved directly from an explicit GEO accession.",
+      "qualifies_as_primary_data": true,
+      "score": 144.4,
+      "summary": "Expression profiling by array | samples: 8",
+      "title": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+      "trusted_domains": [
+        "eutils.ncbi.nlm.nih.gov",
+        "ncbi.nlm.nih.gov"
+      ],
+      "unit_of_analysis": "sample_or_series"
+    },
+    "status": "resolved",
+    "summary": "Selected Identification of circadian-related gene expression profiles in entrained MCF10A from NCBI GEO Functional Genomics as the primary empirical source."
+  },
+  "status": "paper",
+  "summary": "Paper checks passed with 4 artifact-backed result(s).",
+  "validation_issues": []
+}
