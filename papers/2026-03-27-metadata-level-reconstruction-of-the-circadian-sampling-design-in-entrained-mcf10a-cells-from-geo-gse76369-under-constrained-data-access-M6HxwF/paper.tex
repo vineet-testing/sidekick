@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{tabularx}
+
+\usepackage{caption}
+
+\usepackage{float}
+
+\usepackage{microtype}
+
+\usepackage{lmodern}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+
+\setlength{\parindent}{1.25em}
+
+\setlength{\parskip}{0pt}
+
+\title{Metadata-level reconstruction of the circadian sampling design in entrained MCF10A cells from GEO GSE76369 under constrained data access}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\small\textit{Research Paper}\end{center}
+
+\begin{abstract}
+
+GEO subseries GSE76369 is a human MCF10A circadian time-course microarray study comprising eight samples collected every 4 hours from 0 to 28 hours after serum shock on the GPL21250 HEEBO platform, which contains 44,544 70-mer probes. The accession page and sample records indicate a two-color design in which samples 16 hours apart were co-hybridized, yielding the inferred pairings 0/16, 4/20, 8/24, and 12/28 hours. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) The summarized run described here, however, could not download GEO numeric resources inside its sandbox and therefore did not reconstruct or analyze expression values. Instead, it produced metadata-only artifacts: a harmonized sample table, an inferred pairing table, a timeline figure, a failure log, and a reproducible handoff script. As of March 27, 2026, the accession remains public and GEO sample pages expose processed sample-level tables, but those numerical data were not consumed by the run summarized in this manuscript. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) The principal result is therefore a conservative reconstruction of study architecture rather than biological inference. This reconstruction establishes the temporal structure, array pairing logic, and phenotype harmonization needed for a future expression-level reanalysis, while explicitly avoiding unsupported claims about circadian genes.
+
+\end{abstract}
+
+\section{Introduction}
+Circadian transcriptomics is often used to quantify how cell-autonomous clocks shape temporal gene expression, but robust inference depends strongly on synchronization protocol, sampling scheme, replication, and statistical treatment of rhythmic signals. Serum shock became a standard in vitro entrainment method after Balsalobre and colleagues showed that a brief high-serum pulse can induce circadian gene expression in mammalian cultured cells. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/9635423/?utm\_source=openai)) In breast models, prior work reported that entrainment can reveal distinct clock-gene behaviors across epithelial and cancer cell lines, including irregular or defective oscillatory patterns in MCF10A relative to other mammary systems, and the publication linked to GSE76369 extended this line of work to microarray-based screening of entrained breast cell lines. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/22193044/?utm\_source=openai)) MCF10A itself is a widely used immortalized, non-tumorigenic human mammary epithelial model derived from fibrocystic breast tissue, which makes it a reasonable reference context for nonmalignant breast epithelial circadian studies. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/1975513/?utm\_source=openai))
+
+The present manuscript addresses a narrower question than the original study: what circadian-study structure can be recovered for MCF10A in GSE76369 when the numerical expression tables are unavailable during execution? This distinction matters because best-practice guidance for genome-scale rhythm studies emphasizes that design quality constrains interpretability, especially when time series are sparse or lack explicit replicate annotation. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC5692188/)) Accordingly, this paper reports a metadata-level reconstruction of the GSE76369 MCF10A subseries, clarifies the two-color pairing design, documents the absence of validated expression-level output in the summarized run, and positions these artifacts as preparatory materials for future reanalysis rather than as evidence of gene-level rhythmicity.
+
+\section{Data And Methods}
+This manuscript was written from two inputs: the validated run summary supplied with the task and primary metadata from GEO and PubMed. The GEO series record was used to confirm study scope, sample count, time range, platform, and availability of raw GPR files; the GPL21250 platform record was used to confirm the array identity and probe count; and the GSM sample pages were used to recover dye labels, raw-file assignments, and the statement that samples separated by 16 hours were hybridized on the same array. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) From these records, the design was reconstructed as four inferred Cy3/Cy5 pairings: 0/16 hours on 0042.gpr, 4/20 hours on 0219.gpr, 8/24 hours on 0041.gpr, and 12/28 hours on 0220.gpr. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))
+
+The analytical scope was intentionally conservative. No de novo probe-level import, background correction, normalization, annotation join, dimensionality reduction, probe collapse, rhythmicity modeling, or gene ranking was performed in the summarized run because the sandbox lacked usable numeric substrate. The run therefore generated only metadata artifacts: a harmonized phenotype table for the eight samples, an inferred raw-design table, a timeline figure, a failure log, and a reproduction script. Phenotype wording was harmonized to a conservative epithelial, non-tumorigenic/noncancerous MCF10A description because the GEO sample pages use inconsistent terminology despite MCF10A being a standard non-tumorigenic mammary epithelial model in the literature. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/1975513/?utm\_source=openai))
+
+For context only, the original GEO sample pages document that the deposited data were processed with limma-style background correction and two-color normalization, specifically normexp background correction, within-array print-tip loess normalization, between-array quantile normalization of A values, and reconstruction of single-channel values from M and A. Those original procedures were not rerun here; they were recorded only to define the intended future recovery path. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))
+
+\section{Results}
+The recoverable structure of GSE76369 is an eight-sample MCF10A time course spanning 0, 4, 8, 12, 16, 20, 24, and 28 hours after serum shock. The series page identifies the experiment as expression profiling by array in Homo sapiens and links the subseries to GPL21250, a custom Stanford HEEBO spotted oligonucleotide platform with 44,544 probes. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) Sample-level metadata further show a paired two-color design: GSM1982275 and GSM1982279 correspond to the 0/16-hour array 0042.gpr; GSM1982276 and GSM1982280 to the 4/20-hour array 0219.gpr; GSM1982277 and GSM1982281 to the 8/24-hour array 0041.gpr; and GSM1982278 and GSM1982282 to the 12/28-hour array 0220.gpr. In each case, the earlier time point is labeled Cy3 and the later time point Cy5. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))
+
+Figure 1, derived entirely from metadata, summarizes this design as a linear 0-to-28-hour timeline with four connector bars spanning the inferred 16-hour co-hybridizations. This figure does not display expression intensities and should be interpreted strictly as a study-design schematic. The main empirical output of the summarized run is therefore architectural: ordered time points, dye assignments, raw-file pairing logic, and phenotype harmonization. No probe-, gene-, or pathway-level circadian result was generated from this run.
+
+A further result is methodological clarification. The summarized execution reported inability to redownload GEO series, sample, and platform resources inside its sandbox, and no local cache of the numeric matrix was available. Consequently, sample quality control, annotation joining, and temporal modeling were not performed. Notably, this historical execution constraint should be distinguished from the accession's current public status: as of March 27, 2026, the series page exposes raw GPR links and the GSM pages expose processed tables with 44,544 rows per sample, but those accessible resources were not ingested by the run summarized here. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))
+
+Interpretively, the study design visible in the accession is informative but limited for strong rhythmicity claims from this run alone. The subseries page shows only eight sample entries, and no explicit biological replicate identifiers are visible in the public sample list. Best-practice guidance for genome-scale rhythm studies notes that sparse sampling and limited replication reduce confidence in phase, amplitude, and rhythmicity estimation. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Metadata table for the 8 MCF10A time points with harmonized phenotype wording and ordered sampling times.}
+\label{tab:artifact-3}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+gsm & time h & gpr file & channel & pair time h & cell line \\
+\midrule
+GSM1982275 & 0 & GSE76369 0042.gpr & Cy3 & 16 & MCF10A \\
+GSM1982276 & 4 & GSE76369 0219.gpr & Cy3 & 20 & MCF10A \\
+GSM1982277 & 8 & GSE76369 0041.gpr & Cy3 & 24 & MCF10A \\
+GSM1982278 & 12 & GSE76369 0220.gpr & Cy3 & 28 & MCF10A \\
+GSM1982279 & 16 & GSE76369 0042.gpr & Cy5 & 0 & MCF10A \\
+GSM1982280 & 20 & GSE76369 0219.gpr & Cy5 & 4 & MCF10A \\
+GSM1982281 & 24 & GSE76369 0041.gpr & Cy5 & 8 & MCF10A \\
+GSM1982282 & 28 & GSE76369 0220.gpr & Cy5 & 12 & MCF10A \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Table encoding the inferred four raw two-color pairings and their Cy3/Cy5 channel assignments across the 16-hour offsets.}
+\label{tab:artifact-4}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+gpr file & cy3 gsm & cy3 time h & cy5 gsm & cy5 time h & time offset h \\
+\midrule
+GSE76369 0042.gpr & GSM1982275 & 0 & GSM1982279 & 16 & 16 \\
+GSE76369 0219.gpr & GSM1982276 & 4 & GSM1982280 & 20 & 16 \\
+GSE76369 0041.gpr & GSM1982277 & 8 & GSM1982281 & 24 & 16 \\
+GSE76369 0220.gpr & GSM1982278 & 12 & GSM1982282 & 28 & 16 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Reproducible log of failed network attempts to access GEO resources required for matrix reconstruction.}
+\label{tab:artifact-5}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+url & ok & error \\
+\midrule
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982278 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982279 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982280 & False & ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\textbackslash\{\}'www.ncbi.nlm.nih.gov\textbackslash\{\}' \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.94\linewidth]{figures/figure\_1.png}
+\caption{Timeline figure showing the eight sampling times and the four inferred Cy3/Cy5 raw pairings spanning 16 hours.}
+\label{fig:artifact-6}
+\end{figure}
+
+\section{Discussion}
+This metadata-only reconstruction confirms that GSE76369 was organized as a post-serum-shock mammary epithelial time course rather than as an unordered set of breast-cell arrays. That architecture is biologically coherent with prior entrainment studies showing that serum shock can synchronize peripheral clocks and reveal temporal gene-expression programs in cultured mammalian cells, including breast epithelial systems. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/9635423/?utm\_source=openai)) The linked Chronobiology International article reports that the broader project used microarrays to screen entrained breast cell lines and then validated selected genes by qPCR, so the reconstructed MCF10A design is fully consistent with an intended circadian-screening workflow. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/27010605/))
+
+At the same time, the present run supports only design-level conclusions. The key scientific value here is not discovery of rhythmic genes, but recovery of the assumptions required for a future reproducible reanalysis: sample order, interval spacing, raw-file relationships, dye orientation, and a conservative phenotype label. This restraint is important because the statistical literature on circadian omics emphasizes that rhythmicity is probabilistic, sensitive to sampling design, and easily overstated when time series are short or incompletely replicated. Hughes and colleagues specifically recommend at least two cycles for detection and note benefits of higher temporal resolution and explicit replication, while also warning that experimental goals determine how much inference a design can support. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC5692188/)) Relative to those recommendations, the visible GSE76369 MCF10A subseries is sparse and lacks obvious replicate annotation, so a conservative interpretation is warranted even after numerical recovery.
+
+The reconstructed two-color structure also has analytical implications. Because each raw array compares two time points separated by 16 hours, future processing should respect the original paired design rather than treating all observations as independent single-channel arrays without verifying how the processed values were derived. The sample pages indicate that the depositors used limma-compatible two-color preprocessing before splitting normalized M and A values back into single-channel approximations, which means a downstream reanalysis should carefully reconcile sample tables, raw GPR files, and platform annotation before any circadian ranking. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))
+
+Finally, harmonizing the phenotype description to non-tumorigenic epithelial MCF10A is not merely editorial. The sample pages contain inconsistent wording, but the biological literature consistently places MCF10A in the immortalized, non-tumorigenic mammary epithelial category. That harmonization improves interpretability without changing the underlying accession content. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275))
+
+\section{Conclusion}
+The present manuscript documents a conservative reconstruction of what could be recovered from GSE76369 for entrained MCF10A cells when the summarized execution environment could not obtain the numeric expression substrate. The validated outputs support four firm conclusions: the study contains eight post-serum-shock time points sampled every 4 hours from 0 to 28 hours; the arrays were generated on the 44,544-probe GPL21250 HEEBO platform; the raw experiment followed four inferred two-color pairings separated by 16 hours; and the available artifact set is metadata-only rather than expression-based. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) No circadian genes were identified, no amplitudes or phases were estimated, and no biological pathway conclusions should be drawn from this run. The practical contribution is a reproducible handoff for future recovery of the processed tables or raw GPR files and a clear statement of what is, and is not, established at the metadata level.
+
+\section{Limitations}
+The primary limitation is procedural: the summarized sandbox execution could not download the GEO series matrix, processed GSM tables, or GPL annotation at run time, and no local cached copy of the numeric data was available. As a result, the analysis could not perform probe alignment, quality control, dimensionality reduction, probe-to-gene summarization, or rhythmicity modeling. These absences are why the outputs are restricted to metadata artifacts and should not be interpreted as biological expression results. A second limitation is design visibility: the public accession page exposes eight samples in this subseries but does not visibly provide explicit biological replicate identifiers, which constrains strong inference even after design reconstruction. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) A third limitation is historical reproducibility of the execution environment. Although the accession is public and, as of March 27, 2026, the series page lists raw GPR files while the sample pages display processed sample tables, those resources were not successfully ingested by the specific run summarized here. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
