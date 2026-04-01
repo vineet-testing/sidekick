@@ -1,0 +1,9 @@
+sample_id,title,time_point_hours,dye_label,raw_file,source_name,row_count,table_path
+GSM1982275,MCF10A_0hour,0,Green.Cy3.0,cy3 of 0042.gpr,MCF-10A_0 hr time point,44544,downloads/GSM1982275_sample_table.tsv
+GSM1982276,MCF10A_4hour,4,Green.Cy3.4,cy3 of 0219.gpr,MCF-10A_4 hr time point,44544,downloads/GSM1982276_sample_table.tsv
+GSM1982277,MCF10A_8hour,8,Green.Cy3.8,cy3 of 0041.gpr,MCF-10A_8 hr time point,44544,downloads/GSM1982277_sample_table.tsv
+GSM1982278,MCF10A_12hour,12,Green.Cy3.12,cy3 of 0220.gpr,MCF-10A_12 hr time point,44544,downloads/GSM1982278_sample_table.tsv
+GSM1982279,MCF10A_16hour,16,Red.Cy5.16,cy5 of 0042.gpr,MCF-10A_16 hr time point,44544,downloads/GSM1982279_sample_table.tsv
+GSM1982280,MCF10A_20hour,20,Red.Cy5.20,cy5 of 0219.gpr,MCF-10A_20 hr time point,44544,downloads/GSM1982280_sample_table.tsv
+GSM1982281,MCF10A_24hour,24,Red.Cy5.24,cy5 of 0041.gpr,MCF-10A_24 hr time point,44544,downloads/GSM1982281_sample_table.tsv
+GSM1982282,MCF10A_28hour,28,Red.Cy5.28,cy5 of 0220.gpr,MCF-10A_28 hr time point,44544,downloads/GSM1982282_sample_table.tsv
