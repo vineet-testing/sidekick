@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{tabularx}
+
+\usepackage{caption}
+
+\usepackage{float}
+
+\usepackage{microtype}
+
+\usepackage{lmodern}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+
+\setlength{\parindent}{1.25em}
+
+\setlength{\parskip}{0pt}
+
+\title{Memo: Circadian Study for GSE76369 Did Not Clear the Empirical Paper Gate}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\small\textit{Research Memo}\end{center}
+
+\begin{abstract}
+
+This memo documents an attempted empirical analysis of GEO series GSE76369, titled Identification of circadian-related gene expression profiles in entrained MCF10A. According to the GEO record, the study is a Homo sapiens expression-profiling-by-array time course in MCF10A cells with eight samples collected from 0 to 28 hours at 4-hour intervals after entrainment, on platform GPL21250, with processed data indicated in sample tables and supplementary GPR/TXT files available in the accession record. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) However, this run did not clear the empirical paper gate because no numeric or semi-numeric substrate was downloaded locally: retrieval of the series matrix, processed tables, supplementary text, platform annotation, and raw archive was blocked before any usable file could be saved. Consequently, no normalization, rhythmicity detection, validation, figure generation, or statistical inference was performed for this run. In place of a full empirical manuscript, we provide a methods-and-failure memo that situates the blocked acquisition in the context of prior circadian work in mammary epithelial and breast cancer models, where serum-shock entrainment and time-resolved transcript measurements have previously been used to study clock disruption and subtype-specific rhythmic programs. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/27010605/?utm\_source=openai))
+
+\end{abstract}
+
+\section{Introduction}
+The research question supplied for this run was a circadian study centered on GSE76369. The official GEO accession describes GSE76369 as Identification of circadian-related gene expression profiles in entrained MCF10A, a public series released on April 1, 2016, comprising eight MCF10A samples spanning 0 to 28 hours in 4-hour increments after synchronization, generated as expression profiling by array in human cells on the HEEBO platform GPL21250. The GEO summary further links this subseries to a broader breast-cell-line study and states that the associated design used serum shock for synchronization, microarray time-course profiling, cosine-based selection of correlated profiles, and qPCR validation in the broader project. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))
+
+The biological motivation for analyzing this series is strong. Circadian programs regulate a substantial fraction of tissue-specific transcriptional output, and breast biology has been repeatedly implicated in clock-dependent regulation and in the consequences of clock disruption for tumor-associated phenotypes. A review of the field notes that peripheral clocks drive tissue-specific rhythmic transcription, often affecting roughly 5-10\% of genes, and summarizes growing evidence that circadian clock gene expression is relevant to breast development, stromal regulation, and cancer biology. ([breast-cancer-research.biomedcentral.com](https://breast-cancer-research.biomedcentral.com/articles/10.1186/s13058-016-0743-z))
+
+Prior work in mammary epithelial models also explains why a time-course dataset in MCF10A is potentially informative. Earlier serum-shock studies reported that MCF10A cells can display rhythmic expression in some core clock genes, but with more irregular or incomplete patterns than other non-tumorigenic mammary epithelial models. Specifically, one study found more robust circadian behavior for PER1 and PER3 in MCF10A, whereas other clock components were imperfectly rhythmic or non-rhythmic. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3293384/)) Subsequent work across the MCF10 progression series similarly showed synchronized MCF10A cells with antiphase BMAL1 and PER2 expression and stronger BMAL1 amplitudes than more malignant derivatives, while also emphasizing the limitations of coarse 4-hour RT-PCR sampling and short observation windows. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC6449806/))
+
+Against that background, GSE76369 could in principle support a focused reanalysis of circadian-related transcription in non-tumorigenic MCF10A. However, the present run remained a memo rather than a paper because the acquisition gate failed before any analyzable substrate could be materialized locally.
+
+\section{Data And Methods}
+This manuscript is a memo because the run did not clear the empirical paper gate. The precondition for empirical analysis was successful acquisition of at least one usable numeric or semi-numeric local file from GEO. In line with the stated GEO retrieval strategy, acquisition was attempted in staged order: series matrix first, then processed sample-table discovery, supplementary processed-table discovery, platform annotation discovery, and finally raw-archive fallback. The targeted accession was GSE76369, whose GEO record indicates standard GEO entities including series, samples, platform, family files, a series matrix, and supplementary files. GEO itself is organized around platform, sample, and series objects, which is why those substrate types were the appropriate first-line acquisition targets. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))
+
+The intended downstream empirical workflow, had acquisition succeeded, would have been a standard circadian transcriptomics pipeline tailored to the validated contents of the downloaded substrate: parse processed expression values and probe annotation; verify sample ordering across the eight time points; inspect missingness and feature mapping; normalize or confirm submitted normalization depending on file type; collapse probes to genes where justified; and perform rhythmicity screening with methods appropriate for sparse time-course data. Because the associated publication describes microarray time-course profiling after serum shock and selection of rhythmic candidates using a cosine-based approach followed by qPCR validation, any reanalysis would have been constrained to reproducing or extending those design elements without inventing new assays. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/27010605/?utm\_source=openai))
+
+No such empirical pipeline was executed. The run log states that external retrieval from NCBI GEO and EUtils was blocked in the execution environment before any series matrix, processed table, annotation file, or raw archive could be saved locally. Accordingly, the acquisition gate terminated the analysis at substrate\_class=none, and no figure summaries were generated because no validated analysis outputs existed for this run.
+
+\section{Results}
+The principal result of this run is negative but decisive: empirical analysis was not performed because no usable numeric or semi-numeric GEO substrate was acquired locally. The acquisition report states that all five staged retrieval attempts failed under blocked external network conditions, including the series matrix, processed sample-table discovery through EUtils, supplementary-table discovery from the GEO text view, platform annotation discovery, and raw-archive fallback. The run therefore ended with empirical\_ready=false and substrate\_class=none.
+
+Because the gate failed at acquisition, there are no dataset-derived expression matrices, no sample-level QC summaries, no normalization diagnostics, no rhythmicity calls, no gene rankings, no validation analyses, and no figures. In particular, no claims can be made from this run about rhythmic genes in MCF10A, phase relationships, amplitudes, pathway enrichment, or concordance with the associated publication. The only validated dataset-level facts retained for this memo are the accession metadata from GEO: GSE76369 is a public human expression-profiling-by-array series in entrained MCF10A with eight samples across 0-28 hours in 4-hour intervals on GPL21250, with a linked publication and supplementary accession files listed in the GEO record. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369))
+
+As a result, this memo does not report empirical findings about circadian-related gene expression profiles in GSE76369. It reports instead that the run failed the acquisition condition required to support a reproducible empirical manuscript.
+
+\begin{table}[t]
+\centering
+\caption{Structured acquisition summary with substrate classification and empirical-readiness decision.}
+\label{tab:data-access-report}
+\texttt{tables/table\_1.json}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Structured manifest of every acquisition attempt and saved file classification.}
+\label{tab:download-manifest}
+\texttt{tables/table\_2.json}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Tabular network-attempt receipt for acquisition debugging.}
+\label{tab:network-attempts}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+entry id & url & source family & retrieval target & method & status \\
+\midrule
+download 1 & https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76369\&format=file\&file=GSE7636 & NCBI GEO Functional Genomics & series matrix & https get & blocked \\
+download 2 & https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gds\&term=GSE76369\% & NCBI GEO Functional Genomics & processed sample table & https get & blocked \\
+download 3 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369\&targ=self\&form=text\& & NCBI GEO Functional Genomics & processed supplementary table & https get & blocked \\
+download 4 & https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gds\&id=200076369\& & NCBI GEO Functional Genomics & platform annotation & https get & blocked \\
+download 5 & https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76369\&format=file & NCBI GEO Functional Genomics & raw archive & https get & blocked \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Discussion}
+Although this run produced no new measurements or reanalysis outputs, the blocked acquisition is scientifically consequential because circadian time-course datasets are highly sensitive to preprocessing, feature mapping, and rhythmicity-calling choices. Community guidance for genome-scale rhythm studies emphasizes rigor in study design, sampling structure, and transparent analytical handling of large-scale rhythmic data; these principles are especially relevant for sparse time courses such as eight samples at 4-hour intervals. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC5692188/?utm\_source=openai))
+
+The related literature suggests that a successful reanalysis of GSE76369 would have been informative rather than redundant. Earlier serum-shock work in mammary epithelial models found that MCF10A retains some clock-like behavior but with irregular patterns in several canonical clock components, supporting the idea that non-tumorigenic breast epithelial cells can occupy an intermediate state between robust rhythmicity and clear disruption. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3293384/)) The associated GSE76369 publication further argues that both non-cancerous and cancerous breast cell lines can generate subtype-specific circadian expression profiles after entrainment, implying that gene-level rhythmic programs may differ even when canonical clock readouts appear damped or defective. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/27010605/?utm\_source=openai)) Later work in MCF10-derived progression models showed that synchronized oscillations remain measurable across disease states, but that waveform stability, amplitude, and phase coherence can change with malignancy; importantly, that study also stressed that low-resolution RT-PCR time courses are insufficient for precise period estimation. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/30943793/?utm\_source=openai)) Together, these studies reinforce that GSE76369 is a legitimate candidate for reanalysis once data acquisition is restored.
+
+Additional context comes from studies using serum-shocked MCF10A as a circadian breast-cell model for functional endpoints beyond basal clock genes. For example, time-of-day differences in benzo[a]pyrene metabolism and DNA-adduct formation have been demonstrated in synchronized MCF10A cells, with peak metabolic responses at specific post-shock times, indicating that the model can couple rhythmic transcriptional state to carcinogen-processing phenotypes. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/28007926/)) This broader literature increases the value of recovering GSE76369, because even a small time-course array can be useful for hypothesis generation about entrainment-responsive pathways in a non-tumorigenic mammary background.
+
+The key interpretation, however, remains procedural rather than biological: the absence of empirical results here should not be mistaken for evidence of absent rhythmicity in GSE76369. It reflects a failed acquisition condition, not a negative biological finding.
+
+\section{Conclusion}
+This run did not clear the empirical paper gate. GSE76369 is a well-defined circadian microarray time course in entrained MCF10A cells, and prior literature indicates that such models can reveal biologically meaningful rhythmic or partially rhythmic programs in breast epithelial systems. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369)) Nevertheless, no empirical manuscript could be produced because external retrieval from NCBI GEO/EUtils was blocked before any usable local numeric substrate was saved. The correct scientific conclusion for this run is therefore operational: acquisition failed, analysis was not executed, and no new claims about gene-level circadian behavior in GSE76369 are warranted.
+
+A future rerun should begin with restored access to the GEO series matrix or processed sample tables, followed by verification of time-point ordering, annotation integrity, normalization status, and a prespecified rhythmicity workflow suitable for sparse circadian transcriptomic data. Only after that acquisition and validation step succeeds should a full empirical manuscript be written.
+
+\section{Limitations}
+The primary limitation is absolute: no empirical analysis was run because the acquisition gate did not materialize any usable numeric or semi-numeric substrate.
+
+The execution environment blocked external retrieval from NCBI GEO and EUtils before any series matrix, processed table, platform annotation, or raw archive could be saved locally.
+
+No figure summaries were available, so no figures could be described or interpreted.
+
+No claims about rhythmic genes, amplitudes, phases, pathway enrichment, or concordance with the associated publication can be validated from this run.
+
+This memo is therefore constrained to accession metadata, acquisition diagnostics, and literature-grounded context rather than dataset-derived results.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
