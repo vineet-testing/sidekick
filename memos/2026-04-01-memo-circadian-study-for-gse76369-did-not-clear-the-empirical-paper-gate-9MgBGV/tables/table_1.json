@@ -1,0 +1,224 @@
+{
+  "blocking_reason": "No usable numeric or semi-numeric file was downloaded locally. External retrieval from NCBI GEO/EUtils was blocked in the current execution environment before any series matrix, processed table, or raw archive could be saved.",
+  "budgets": {
+    "max_file_bytes": 104857600,
+    "max_files": 12,
+    "max_seconds": 900,
+    "max_total_bytes": 262144000
+  },
+  "dataset": {
+    "accession_id": "GSE76369",
+    "download_url": "",
+    "label": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+    "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+    "notes": "Resolved directly from an explicit GEO accession."
+  },
+  "download_manifest": [
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "content_type": "",
+      "entry_id": "download_1",
+      "error_kind": "blocked",
+      "error_message": "External network retrieval was unavailable in the execution environment; series matrix could not be fetched.",
+      "http_status": 0,
+      "latency_ms": 0,
+      "method": "https_get",
+      "notes": "First retrieval target per GEO order. No local file saved.",
+      "retrieval_target": "series_matrix",
+      "saved_file_kind": "",
+      "saved_path": "downloads/entry_1",
+      "source_family": "NCBI GEO Functional Genomics",
+      "status": "blocked",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76369&format=file&file=GSE76369_series_matrix.txt.gz",
+      "usable_for_analysis": false
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "content_type": "",
+      "entry_id": "download_2",
+      "error_kind": "blocked",
+      "error_message": "External network retrieval was unavailable in the execution environment; EUtils accession resolution for processed sample tables could not be performed.",
+      "http_status": 0,
+      "latency_ms": 0,
+      "method": "https_get",
+      "notes": "Attempted discovery step for sample-level processed files; no response obtained.",
+      "retrieval_target": "processed_sample_table",
+      "saved_file_kind": "",
+      "saved_path": "downloads/entry_2",
+      "source_family": "NCBI GEO Functional Genomics",
+      "status": "blocked",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gds&term=GSE76369%5BAccession%5D&retmode=json",
+      "usable_for_analysis": false
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "content_type": "",
+      "entry_id": "download_3",
+      "error_kind": "blocked",
+      "error_message": "External network retrieval was unavailable in the execution environment; GEO series text view for supplementary-file discovery could not be fetched.",
+      "http_status": 0,
+      "latency_ms": 0,
+      "method": "https_get",
+      "notes": "Attempted supplementary-table discovery without spending budget on raw archives first.",
+      "retrieval_target": "processed_supplementary_table",
+      "saved_file_kind": "",
+      "saved_path": "downloads/entry_3",
+      "source_family": "NCBI GEO Functional Genomics",
+      "status": "blocked",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369&targ=self&form=text&view=quick",
+      "usable_for_analysis": false
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "content_type": "",
+      "entry_id": "download_4",
+      "error_kind": "blocked",
+      "error_message": "External network retrieval was unavailable in the execution environment; platform annotation discovery could not be performed.",
+      "http_status": 0,
+      "latency_ms": 0,
+      "method": "https_get",
+      "notes": "Platform discovery step could not proceed; no annotation file downloaded.",
+      "retrieval_target": "platform_annotation",
+      "saved_file_kind": "",
+      "saved_path": "downloads/entry_4",
+      "source_family": "NCBI GEO Functional Genomics",
+      "status": "blocked",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gds&id=200076369&retmode=json",
+      "usable_for_analysis": false
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "content_type": "",
+      "entry_id": "download_5",
+      "error_kind": "blocked",
+      "error_message": "External network retrieval was unavailable in the execution environment; raw/supplementary archive fallback could not be fetched.",
+      "http_status": 0,
+      "latency_ms": 0,
+      "method": "https_get",
+      "notes": "Raw archive fallback was not able to download; no local archive saved.",
+      "retrieval_target": "raw_archive",
+      "saved_file_kind": "",
+      "saved_path": "downloads/entry_5",
+      "source_family": "NCBI GEO Functional Genomics",
+      "status": "blocked",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76369&format=file",
+      "usable_for_analysis": false
+    }
+  ],
+  "empirical_ready": false,
+  "host_failures": [
+    {
+      "attempts": 3,
+      "error_kinds": [
+        "blocked"
+      ],
+      "failures": 3,
+      "host": "ncbi.nlm.nih.gov"
+    },
+    {
+      "attempts": 2,
+      "error_kinds": [
+        "blocked"
+      ],
+      "failures": 2,
+      "host": "eutils.ncbi.nlm.nih.gov"
+    }
+  ],
+  "metadata_only_saved_files": [
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "path": "downloads/entry_1",
+      "retrieval_target": "series_matrix"
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "path": "downloads/entry_2",
+      "retrieval_target": "processed_sample_table"
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "path": "downloads/entry_3",
+      "retrieval_target": "processed_supplementary_table"
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "path": "downloads/entry_4",
+      "retrieval_target": "platform_annotation"
+    },
+    {
+      "bytes_downloaded": 0,
+      "classification": "failed",
+      "path": "downloads/entry_5",
+      "retrieval_target": "raw_archive"
+    }
+  ],
+  "receipts": {
+    "data_access_report_path": "data_access_report.json",
+    "download_manifest_path": "download_manifest.json",
+    "network_attempts_path": "network_attempts.tsv"
+  },
+  "sources": [
+    {
+      "accession_id": "GSE76369",
+      "api_endpoint": "",
+      "api_query": "",
+      "download_url": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76369&format=file&file=GSE76369_series_matrix.txt.gz",
+      "label": "GEO series landing page for GSE76369",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+      "notes": "Primary GEO accession source; series matrix was the preferred first numeric target.",
+      "source_id": "source_1"
+    },
+    {
+      "accession_id": "GSE76369",
+      "api_endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "api_query": "db=gds&term=GSE76369[Accession]&retmode=json",
+      "download_url": "",
+      "label": "NCBI EUtils GEO discovery endpoint",
+      "landing_page_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+      "notes": "Used for accession/platform discovery needed to locate processed sample tables and annotations.",
+      "source_id": "source_2"
+    }
+  ],
+  "status": "blocked",
+  "strategy": {
+    "family_id": "geo_functional_genomics",
+    "family_label": "NCBI GEO Functional Genomics",
+    "metadata_only_targets": [
+      "series_html",
+      "sample_html",
+      "platform_html",
+      "landing_page"
+    ],
+    "notes": "For GEO, prefer processed tables and series matrix files first. Do not count sample HTML, platform HTML, or the series landing page as numeric substrate.",
+    "numeric_targets": [
+      "series_matrix",
+      "processed_sample_table",
+      "processed_expression_table",
+      "gpr",
+      "raw_archive"
+    ],
+    "retrieval_order": [
+      "series_matrix",
+      "processed_sample_table",
+      "processed_supplementary_table",
+      "platform_annotation",
+      "raw_archive"
+    ],
+    "trusted_domains": [
+      "eutils.ncbi.nlm.nih.gov",
+      "ncbi.nlm.nih.gov"
+    ]
+  },
+  "substrate_class": "none",
+  "summary": "Attempt 3 did not acquire any GEO numeric or semi-numeric substrate for GSE76369. Retrieval was staged in the required GEO order starting with series matrix, then processed-table discovery, supplementary-table discovery, platform discovery, and raw archive fallback, but no remote fetches could complete in this execution environment, so no usable local file was saved.",
+  "usable_saved_files": []
+}
