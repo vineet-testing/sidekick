@@ -1,0 +1,172 @@
+{
+  "approved_result_ids": [
+    "result_1",
+    "result_2",
+    "result_3",
+    "result_4"
+  ],
+  "approved_results": [
+    {
+      "artifact_ids": [
+        "geo_sample_metadata",
+        "top_circadian_gene_fits"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_1",
+      "source_ids": [
+        "source_1",
+        "source_2"
+      ],
+      "text": "The hosted run recovered 8 processed GEO sample tables and the GPL annotation, yielding a 27112-gene by 8-sample matrix for quantitative analysis."
+    },
+    {
+      "artifact_ids": [
+        "top_circadian_gene_fits"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_2",
+      "source_ids": [
+        "source_1",
+        "source_2"
+      ],
+      "text": "The strongest named 24-hour cosine fits were CH25H (R\u00b2 0.965, amplitude 1.300, phase 20.8 h), PLN (R\u00b2 0.949, amplitude 0.952, phase 17.4 h), ARL6IP2 (R\u00b2 0.948, amplitude 0.533, phase 5.8 h), FOXN4 (R\u00b2 0.943, amplitude 0.524, phase 5.9 h), LILRA2 (R\u00b2 0.940, amplitude 0.272, phase 2.9 h)."
+    },
+    {
+      "artifact_ids": [
+        "core_clock_gene_fits"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_3",
+      "source_ids": [
+        "source_1",
+        "source_2"
+      ],
+      "text": "ARNTL/BMAL1 reached amplitude 0.790 log2 units with R\u00b2 0.742 and phase 20.1 h; CRY2 reached amplitude 1.631 with R\u00b2 0.518; PER1 reached amplitude 0.590 with R\u00b2 0.363."
+    },
+    {
+      "artifact_ids": [
+        "sample_correlation_matrix"
+      ],
+      "note_ids": [
+        "note_1"
+      ],
+      "result_id": "result_4",
+      "source_ids": [
+        "source_1",
+        "source_2"
+      ],
+      "text": "The strongest sample-level correlation was GSM1982275 versus GSM1982279 at r=0.866, and the earliest-vs-latest comparison remained positively correlated at r=0.739."
+    }
+  ],
+  "data_access": {
+    "empirical_ready": true,
+    "has_receipts": true,
+    "substrate_class": "semi_numeric"
+  },
+  "dropped_results": [],
+  "final_format": "paper",
+  "manuscript_kind": "paper",
+  "memo_reasons": [],
+  "missing_note_ids": [],
+  "paper_checks": {
+    "covers_requested_notes": true,
+    "described_work_performed_here": true,
+    "has_artifact_backed_result": true,
+    "has_data_access_receipts": true,
+    "has_original_result": true,
+    "has_quantitative_result": true,
+    "has_real_substrate": true,
+    "uses_resolved_primary_dataset": true
+  },
+  "reference_catalog": [
+    {
+      "key": "ref1",
+      "source_id": "source_1",
+      "text": "GEO series landing page for GSE76369. GSE76369. https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76369&format=file&file=GSE76369_series_matrix.txt.gz. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369. Primary GEO accession source; staged retrieval began with series matrix and then recovered processed sample tables."
+    },
+    {
+      "key": "ref2",
+      "source_id": "source_2",
+      "text": "GEO platform annotation for GPL21250. GPL21250. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL21250. Platform annotation used to map probe IDs onto gene symbols and names."
+    }
+  ],
+  "resolution": {
+    "acceptable_units": [
+      "row"
+    ],
+    "blocking_reason": null,
+    "candidates": [
+      {
+        "access_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+        "api_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gds&retmode=json&id=200076369",
+        "dataset_id": "GSE76369",
+        "download_urls": [],
+        "evidence_count": 8,
+        "family_id": "geo_functional_genomics",
+        "family_label": "NCBI GEO Functional Genomics",
+        "modalities": [
+          "gene_expression",
+          "cancer_genomics",
+          "clinical_cohort",
+          "general_empirical"
+        ],
+        "primary_domain": "eutils.ncbi.nlm.nih.gov",
+        "provenance_note": "Resolved directly from an explicit GEO accession.",
+        "qualifies_as_primary_data": true,
+        "score": 107.25,
+        "summary": "Expression profiling by array | samples: 8",
+        "title": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+        "trusted_domains": [
+          "eutils.ncbi.nlm.nih.gov",
+          "ncbi.nlm.nih.gov"
+        ],
+        "unit_of_analysis": "sample_or_series"
+      }
+    ],
+    "incompatible_primary_family_ids": [
+      "openalex_literature",
+      "pubmed_literature"
+    ],
+    "inferred_modalities": [
+      "general_empirical"
+    ],
+    "paper_mode": "empirical_dataset",
+    "selected_candidate": {
+      "access_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76369",
+      "api_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gds&retmode=json&id=200076369",
+      "dataset_id": "GSE76369",
+      "download_urls": [],
+      "evidence_count": 8,
+      "family_id": "geo_functional_genomics",
+      "family_label": "NCBI GEO Functional Genomics",
+      "modalities": [
+        "gene_expression",
+        "cancer_genomics",
+        "clinical_cohort",
+        "general_empirical"
+      ],
+      "primary_domain": "eutils.ncbi.nlm.nih.gov",
+      "provenance_note": "Resolved directly from an explicit GEO accession.",
+      "qualifies_as_primary_data": true,
+      "score": 107.25,
+      "summary": "Expression profiling by array | samples: 8",
+      "title": "Identification of circadian-related gene expression profiles in entrained MCF10A",
+      "trusted_domains": [
+        "eutils.ncbi.nlm.nih.gov",
+        "ncbi.nlm.nih.gov"
+      ],
+      "unit_of_analysis": "sample_or_series"
+    },
+    "status": "resolved",
+    "summary": "Selected Identification of circadian-related gene expression profiles in entrained MCF10A from NCBI GEO Functional Genomics as the primary empirical source."
+  },
+  "status": "paper",
+  "summary": "Paper checks passed with 4 artifact-backed result(s).",
+  "validation_issues": []
+}
