@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{tabularx}
+
+\usepackage{caption}
+
+\usepackage{float}
+
+\usepackage{microtype}
+
+\usepackage{lmodern}
+
+\usepackage{natbib}
+
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small,labelfont=bf}
+
+\setlength{\parindent}{1.25em}
+
+\setlength{\parskip}{0pt}
+
+\title{Fixed-Period Cosine Reanalysis of Entrained MCF10A Expression Profiles in GSE76369 Identifies Candidate Circadian Genes}
+
+\author{}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}\small\textit{Research Paper}\end{center}
+
+\begin{abstract}
+
+GSE76369 is archived in GEO as an entrained MCF10A breast epithelial time-course generated on an Agilent Human Gene Expression Microarray 4x44K platform. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37933855/?utm\_source=openai)) We performed a lightweight empirical reanalysis of the recovered processed GEO substrate after direct series-matrix retrieval failed but sample-level processed tables were successfully recovered. Eight processed sample tables were assembled into a 44,544-probe matrix, collapsed with platform annotation to 27,112 gene symbols, screened with a fixed 24-hour cosine model, and summarized with a sample-by-sample correlation analysis. The strongest named cosine fits were CH25H (R² 0.965, amplitude 1.300, phase 20.8 h), PLN (R² 0.949, amplitude 0.952, phase 17.4 h), ARL6IP2 (R² 0.948, amplitude 0.533, phase 5.8 h), FOXN4 (R² 0.943, amplitude 0.524, phase 5.9 h), and LILRA2 (R² 0.940, amplitude 0.272, phase 2.9 h). Among core clock genes, ARNTL/BMAL1 retained a comparatively coherent trajectory (amplitude 0.790, R² 0.742, phase 20.1 h), whereas CRY2 showed larger amplitude but lower fit quality and PER1 showed only modest periodic structure. Pairwise transcriptome correlations remained broadly positive across the time course, with the strongest pair at r = 0.866 and the earliest-versus-latest comparison still at r = 0.739. These results support the use of public processed circadian datasets for hypothesis generation in breast epithelial biology, while also showing that sparse sampling and processed-data dependence limit definitive circadian inference.
+
+\end{abstract}
+
+\section{Introduction}
+The mammalian circadian clock is organized as a transcriptional feedback network in which CLOCK:BMAL1 activates PER and CRY genes, whose protein products feed back to repress the same transcriptional program; this cell-autonomous architecture is embedded within a broader hierarchy of central and peripheral timing systems. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC5501165/?utm\_source=openai)) A major practical consequence is that peripheral clocks can be synchronized in vitro, and serum shock remains one of the classic methods for inducing coordinated circadian gene expression in cultured mammalian cells. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/9635423/?utm\_source=openai)) In breast biology, prior work showed that non-tumorigenic mammary epithelial models such as HME1 and MCF10A can display rhythmic clock-gene behavior after entrainment, whereas several breast cancer lines exhibit irregular or lost oscillations. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3293384/)) A later breast-cell profiling study extended this framework to rhythmic microRNA analysis and again used MCF-10A as the non-malignant comparator. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/28704935/)) Public repositories such as GEO make these time-course studies reusable for secondary analysis. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37933855/?utm\_source=openai)) Here, we reanalyzed GSE76369 as a compact empirical paper focused on a transparent question: can a recovered processed MCF10A time course still reveal interpretable 24-hour-like transcriptional trajectories when ranked with a simple fixed-period cosine screen?
+
+\section{Data And Methods}
+We analyzed GSE76369, a GEO series labeled as identification of circadian-related gene expression profiles in entrained MCF10A. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982279\&utm\_source=openai)) Direct retrieval of the series matrix returned a 404 response, so the study used the successfully recovered processed sample tables for eight samples together with GPL21250 platform annotation. The recovered substrate yielded a probe-level matrix with 44,544 features, which was mapped to gene symbols and collapsed to a 27,112-gene matrix by symbol-level aggregation. The experimental context is consistent with the serum-shock entrainment paradigm broadly used for breast epithelial circadian studies. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/9635423/?utm\_source=openai)) We then fit each gene trajectory with a fixed 24-hour cosine model and recorded descriptive parameters including coefficient of determination (R²), fitted amplitude, and phase on a 24-hour scale. Genes were ranked descriptively by fit quality and oscillation magnitude; no raw-array renormalization, multi-period search, or formal inferential differential-expression layer was added beyond the validated backend analysis. In parallel, we computed a sample-by-sample correlation matrix from the recovered expression matrix to characterize global temporal coherence. Because the inputs were deposited processed tables from an Agilent Human Gene Expression Microarray 4x44K platform rather than raw intensities, the workflow should be interpreted as a semi-numeric reanalysis rather than a full de novo microarray preprocessing pipeline. ([agilent.com](https://www.agilent.com/store/en\_US/Prod-G2519F-014850/G2519F-014850))
+
+\section{Results}
+The recovered dataset comprised 8 processed MCF10A samples spanning 8 time points and produced a 27,112-symbol gene-expression matrix after probe collapsing. The fixed 24-hour cosine screen prioritized CH25H (R² 0.965, amplitude 1.300, phase 20.8 h), PLN (R² 0.949, amplitude 0.952, phase 17.4 h), ARL6IP2 (R² 0.948, amplitude 0.533, phase 5.8 h), FOXN4 (R² 0.943, amplitude 0.524, phase 5.9 h), and LILRA2 (R² 0.940, amplitude 0.272, phase 2.9 h) as the strongest named candidates in the recovered matrix. Within canonical clock components, ARNTL/BMAL1 showed the clearest 24-hour-like behavior among the reported core genes (amplitude 0.790 log2 units, R² 0.742, phase 20.1 h), CRY2 showed a larger oscillation amplitude but lower goodness of fit (amplitude 1.631, R² 0.518), and PER1 showed weaker periodic structure (amplitude 0.590, R² 0.363). Sample-level correlations remained positive throughout the time course. The strongest pairwise similarity was observed between GSM1982275 and GSM1982279 (r = 0.866), and even the earliest-versus-latest comparison remained positively correlated (r = 0.739). Taken together, the recovered expression space suggests a time course with substantial overall transcriptomic continuity but a detectable subset of genes whose trajectories conform closely to a 24-hour cosine template.
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Recovered GEO sample metadata with time points, dye labels, and processed-table paths.}
+\label{tab:geo-sample-metadata}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+sample id & title & time point hours & dye label & raw file & source name \\
+\midrule
+GSM1982275 & MCF10A 0hour & 0 & Green.Cy3.0 & cy3 of 0042.gpr & MCF-10A 0 hr time point \\
+GSM1982276 & MCF10A 4hour & 4 & Green.Cy3.4 & cy3 of 0219.gpr & MCF-10A 4 hr time point \\
+GSM1982277 & MCF10A 8hour & 8 & Green.Cy3.8 & cy3 of 0041.gpr & MCF-10A 8 hr time point \\
+GSM1982278 & MCF10A 12hour & 12 & Green.Cy3.12 & cy3 of 0220.gpr & MCF-10A 12 hr time point \\
+GSM1982279 & MCF10A 16hour & 16 & Red.Cy5.16 & cy5 of 0042.gpr & MCF-10A 16 hr time point \\
+GSM1982280 & MCF10A 20hour & 20 & Red.Cy5.20 & cy5 of 0219.gpr & MCF-10A 20 hr time point \\
+GSM1982281 & MCF10A 24hour & 24 & Red.Cy5.24 & cy5 of 0041.gpr & MCF-10A 24 hr time point \\
+GSM1982282 & MCF10A 28hour & 28 & Red.Cy5.28 & cy5 of 0220.gpr & MCF-10A 28 hr time point \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Top named gene-level 24-hour cosine fits from the recovered GEO processed tables.}
+\label{tab:top-circadian-gene-fits}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Symbol & Name & Probe Count & Amplitude 24h & R2 24h & Phase Hours \\
+\midrule
+CH25H & cholesterol 25-hydroxylase & 1 & 1.3 & 0.9647 & 20.777 \\
+PLN & phospholamban & 1 & 0.9519 & 0.9493 & 17.411 \\
+ARL6IP2 & ADP-ribosylation factor-like 6 interacting protein 2 & 3 & 0.5329 & 0.948 & 5.836 \\
+FOXN4 & Forkhead box N4 & 3 & 0.5242 & 0.9427 & 5.943 \\
+LILRA2 & leukocyte immunoglobulin-like receptor, subfamily A (with TM domain), member 2 & 1 & 0.2723 & 0.9395 & 2.866 \\
+ACCN3 & amiloride-sensitive cation channel 3 & 4 & 0.3177 & 0.9376 & 14.176 \\
+CNTNAP1 & contactin associated protein 1 & 1 & 0.7451 & 0.9304 & 5.362 \\
+MYLIP & myosin regulatory light chain interacting protein & 2 & 0.6158 & 0.9266 & 4.796 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Core clock gene trajectories and fit statistics from the recovered GEO expression matrix.}
+\label{tab:core-clock-gene-fits}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Symbol & Name & Probe Count & Amplitude 24h & R2 24h & Phase Hours \\
+\midrule
+ARNTL & aryl hydrocarbon receptor nuclear translocator-like & 1 & 0.7901 & 0.7418 & 20.122 \\
+CLOCK & clock homolog (mouse) & 1 & 0.3485 & 0.1868 & 2.968 \\
+PER1 & period homolog 1 (Drosophila) & 1 & 0.5898 & 0.3632 & 6.219 \\
+PER2 & period homolog 2 (Drosophila) & 16 & 0.1265 & 0.3223 & 12.101 \\
+PER3 & period homolog 3 (Drosophila) & 1 & 0.3391 & 0.0853 & 5.237 \\
+CRY1 & cryptochrome 1 (photolyase-like) & 1 & 0.2533 & 0.1462 & 1.167 \\
+CRY2 & cryptochrome 2 (photolyase-like) & 1 & 1.631 & 0.5181 & 4.634 \\
+NR1D1 & nuclear receptor subfamily 1, group D, member 1 & 1 & 0.4635 & 0.0551 & 5.769 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Sample-level Pearson correlation matrix computed from the recovered GEO gene matrix.}
+\label{tab:sample-correlation-matrix}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+sample id & GSM1982275 & GSM1982276 & GSM1982277 & GSM1982278 & GSM1982279 \\
+\midrule
+GSM1982275 & 1 & 0.8137 & 0.831 & 0.7607 & 0.8662 \\
+GSM1982276 & 0.8137 & 1 & 0.7933 & 0.7589 & 0.743 \\
+GSM1982277 & 0.831 & 0.7933 & 1 & 0.7463 & 0.7614 \\
+GSM1982278 & 0.7607 & 0.7589 & 0.7463 & 1 & 0.7137 \\
+GSM1982279 & 0.8662 & 0.743 & 0.7614 & 0.7137 & 1 \\
+GSM1982280 & 0.7749 & 0.8474 & 0.7453 & 0.7148 & 0.7699 \\
+GSM1982281 & 0.7546 & 0.7196 & 0.8242 & 0.6895 & 0.7664 \\
+GSM1982282 & 0.7392 & 0.7126 & 0.711 & 0.8376 & 0.7461 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Structured acquisition summary with substrate classification and empirical-readiness decision.}
+\label{tab:data-access-report}
+\texttt{tables/table\_5.json}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Structured manifest of every acquisition attempt and saved file classification.}
+\label{tab:download-manifest}
+\texttt{tables/table\_6.json}
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Tabular network-attempt receipt for acquisition debugging.}
+\label{tab:network-attempts}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+entry id & url & source family & retrieval target & method & status \\
+\midrule
+download 1 & https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76369\&format=file\&file=GSE7636 & NCBI GEO Functional Genomics & series matrix & https get & http error \\
+download 2 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275\&targ=self\&form=tex & NCBI GEO Functional Genomics & sample metadata & https get & success \\
+download 3 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982275\&targ=self\&form=tex & NCBI GEO Functional Genomics & processed sample table & https get & success \\
+download 4 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276\&targ=self\&form=tex & NCBI GEO Functional Genomics & sample metadata & https get & success \\
+download 5 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982276\&targ=self\&form=tex & NCBI GEO Functional Genomics & processed sample table & https get & success \\
+download 6 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277\&targ=self\&form=tex & NCBI GEO Functional Genomics & sample metadata & https get & success \\
+download 7 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982277\&targ=self\&form=tex & NCBI GEO Functional Genomics & processed sample table & https get & success \\
+download 8 & https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1982278\&targ=self\&form=tex & NCBI GEO Functional Genomics & sample metadata & https get & success \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Discussion}
+The main contribution of this reanalysis is practical rather than mechanistic: it shows that a partially recovered public circadian dataset can still support a coherent ranking of candidate rhythmic genes. That result is important because GEO is frequently re-used as a discovery substrate, yet many deposited legacy microarray studies are only available through processed tables rather than a conveniently packaged series matrix. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/37933855/?utm\_source=openai)) Biologically, the retention of a comparatively strong ARNTL/BMAL1 trajectory is directionally concordant with prior breast-cell entrainment studies showing that non-malignant mammary epithelial cells can sustain measurable clock behavior after serum shock. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3293384/)) At the same time, the weaker fits for some canonical clock genes, especially PER1, indicate that this recovered 0-28 h processed-data window does not fully reproduce the cleaner multi-cycle kinetics described in earlier qRT-PCR-oriented breast-cell studies. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3293384/)) This mismatch is plausible given the sparse temporal design, the dependence on processed deposited intensities, and the symbol-level averaging of multiple probes. The top-ranked genes in this screen therefore should be interpreted as prioritized outputs of a fixed-period ranking procedure, not as validated core-clock components. In that sense, CH25H, PLN, ARL6IP2, FOXN4, and LILRA2 are best viewed as follow-up candidates for orthogonal validation in denser time courses or independent assays. More broadly, the study reinforces that non-tumorigenic breast epithelial models remain informative for circadian hypothesis generation and for comparative work against breast cancer states in which rhythmic organization may be altered. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3293384/))
+
+\section{Conclusion}
+A fixed-24-hour cosine reanalysis of the recovered GSE76369 MCF10A time course identified a compact set of high-priority rhythmic candidates and recovered interpretable signal in at least part of the canonical clock program. The strongest candidates extended beyond classical clock genes, suggesting that public breast epithelial circadian datasets can still be useful for output-gene discovery even when only processed tables are available. The immediate value of this study is therefore a ranked validation shortlist and a reproducible example of how to extract biologically meaningful temporal structure from imperfect but empirically usable public data.
+
+\section{Limitations}
+This study has important limitations. First, the direct series-matrix download was unavailable, so the analysis depended on recovered processed sample tables rather than a complete series-level or raw-array reconstruction. Second, the GEO tables represent normalized deposited measurements from a two-color microarray context, making the substrate semi-numeric and less controllable than raw-feature preprocessing. Third, the time course is sparse, with only 8 samples over 28 hours, which is sufficient for descriptive screening but not for definitive circadian model selection. Fourth, collapsing probes by gene symbol averages away isoform-specific regulation and can retain cross-hybridization or probe-design artifacts. Fifth, the screen fixed the oscillation period at 24 hours, so genes with damped, shifted, asymmetric, or non-circadian temporal behavior may be mischaracterized. Finally, no external validation cohort or orthogonal assay was available within the present run, so the reported candidates should be considered prioritized hypotheses rather than confirmed circadian transcripts.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
